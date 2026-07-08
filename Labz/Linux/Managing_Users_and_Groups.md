@@ -68,6 +68,8 @@ I validated that the users had been created by entering `sudo cat /etc/passwd | 
 ec2-user
 arosalez
 ```
+<img width="633" height="480" alt="Screenshot 2026-06-18 173936" src="https://github.com/user-attachments/assets/4f8c5ea9-fa05-4f09-9a10-093652cd64c6" />
+
 
 This command helped visualize the created users. The output showed that the first user `arosalez` was successfully added to the system.
 
@@ -92,8 +94,9 @@ nwolf
 psantos
 smartinez
 ssarkar
-Sales:x:1010:
 ```
+<img width="360" height="503" alt="Screenshot 2026-06-18 175131" src="https://github.com/user-attachments/assets/19cc7b31-06cb-4267-ada4-0a635fff7473" />
+
 
 The output confirmed that all 10 new users had been successfully created and added to the system.
 
@@ -134,6 +137,8 @@ ec2-user:x:1000:
 Sales:x:1014
 ...
 ```
+<img width="397" height="518" alt="Screenshot 2026-06-18 175315" src="https://github.com/user-attachments/assets/36cc9963-cace-4a4a-a9c7-ebd4f6d645ff" />
+
 
 This output showed the `/etc/group` file contents and confirmed the Sales group was created.
 
@@ -153,6 +158,8 @@ Shipping:x:1013:
 Managers:x:1014:
 CEO:x:1015:
 ```
+<img width="383" height="187" alt="Screenshot 2026-06-18 175531" src="https://github.com/user-attachments/assets/9e2b8944-5187-4ee6-bd6a-3534d277b4a3" />
+
 
 The output confirmed that all groups had been successfully created.
 
@@ -170,6 +177,7 @@ Sales:x:1014:arosalez
 ...
 ```
 
+
 This confirmed that arosalez was now a member of the Sales group.
 
 ## Step 34: Add Remaining Users to Groups
@@ -181,9 +189,13 @@ I used the `sudo usermod -a -G <Group Name> <user ID>` command to add the remain
 | Sales | arosalez, nwolf | HR | ljuan, smartinez | Finance | mmajor, ssarkar |
 | Shipping | eowusu, jdoe, psantos | Managers | arosalez, ljuan, mmajor | CEO | mjackson |
 
+<img width="462" height="232" alt="Screenshot 2026-06-18 180937" src="https://github.com/user-attachments/assets/a308296d-49ce-4729-af46-bf807cd3407c" />
+
+
 ## Step 35: Add ec2-user to All Groups
 
 I added ec2-user to all groups.
+
 
 ## Step 36: Check Group Memberships
 
@@ -201,6 +213,7 @@ Shipping:x:1013:jdoe,eowusu,psantos,ec2-user
 Managers:x:1014:arosalez,ljuan,mmajor,ec2-user
 CEO:x:1015:mjackson,ec2-user
 ```
+<img width="561" height="207" alt="Screenshot 2026-06-18 181135" src="https://github.com/user-attachments/assets/62238868-16d7-46e9-a135-c51bcb5cc6ca" />
 
 The output displayed all groups with their respective members, including ec2-user who was now part of all groups.
 
@@ -232,6 +245,8 @@ The trailing `ec2-user` indicated that I was located in the ec2-user home direct
 
 I entered `pwd` and pressed Enter to ensure that I was in the `/home/ec2-user` directory.
 
+<img width="467" height="123" alt="Screenshot 2026-06-18 181307" src="https://github.com/user-attachments/assets/7f12a749-05cd-4bdf-9aab-c1350d194a0e" />
+
 ## Step 40: Attempt to Create File (Without Sudo)
 
 I entered `touch myfile.txt` and pressed Enter.
@@ -241,6 +256,8 @@ I entered `touch myfile.txt` and pressed Enter.
 touch: cannot touch 'myfile.txt': Permission denied
 [arosalez@ip-10-0-10-100 ec2-user]$
 ```
+
+<img width="557" height="76" alt="Screenshot 2026-06-18 181351" src="https://github.com/user-attachments/assets/bd45361e-eaa1-45f6-a025-39e7ecccf895" />
 
 I received this message because the user arosalez does not have permission to write files in the ec2-user home folder.
 
@@ -263,11 +280,15 @@ arosalez is not in the sudoers file.  This incident will be reported.
 [arosalez@ip-10-0-10-100 ec2-user]$
 ```
 
+<img width="748" height="300" alt="Screenshot 2026-06-18 181448" src="https://github.com/user-attachments/assets/42641b43-2c94-44fd-8524-2bbda2296f28" />
+
 I entered the password `P@ssword1234!` and pressed Enter. I received this message because the user arosalez is not on the list of the sudoers file. Sudoers are users who have special rights to run commands with elevated privileges. Only a few users should receive this permission.
 
 ## Step 42: Exit arosalez User Session
 
 I entered `exit` and pressed Enter to switch to the previous user, ec2-user.
+
+<img width="701" height="75" alt="Screenshot 2026-06-18 181656" src="https://github.com/user-attachments/assets/24e5482f-c2c5-47cb-b7bb-fcd8cc5d7c0a" />
 
 ## Step 43: View Secure Log File
 
@@ -283,6 +304,8 @@ arosalez
 Jun 18 16:16:16 ip-10-0-10-100 sudo: ec2-user : TTY=pts/0 ; PWD=/home/ec2-user ;
 USER=root ; COMMAND=/bin/cat#040/var/log/secure
 ```
+<img width="878" height="195" alt="Screenshot 2026-06-18 181637" src="https://github.com/user-attachments/assets/68d9c4c7-1586-4b7e-8271-53c97962ac31" />
+
 
 The output showed how a sudo and not permitted action was logged into the `/var/log/secure` file. I could see:
 - The unsuccessful sudo attempt by arosalez trying to create a file
