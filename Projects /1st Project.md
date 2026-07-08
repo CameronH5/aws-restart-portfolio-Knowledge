@@ -80,10 +80,9 @@ To solve these challenges without breaking the bank, we will deploy a **Serverle
 
 **Benefit 2: Extremely Low Cost (AWS Free Tier)**
 - This is crucial for a small local business in Khayelitsha. The proposed serverless architecture costs roughly **$15–$20 per month** to run. 
-- Even better: The AWS Free Tier covers **1 million Lambda requests, 25GB of S3 storage, and 50,000 monthly active Cognito users** for the first 12 months. Salt & 
 - AWS provides different limits than the ones quoted:Lambda: You get 1 million free requests per month. You also get 400,000 GB-seconds of compute time per month. These limits never expire.
-- S3: You get 5 GB of standard storage, not 25GB. You also get 20,000 Get requests and 2,000 Put requests per month. This also never expires.
-- Cognito: The always-free tier provides 10,000 Monthly Active Users (MAUs) (under the Essentials plan), not 50,000
+- S3: You get 5 GB of standard storage. You also get 20,000 Get requests and 2,000 Put requests per month. This also never expires.
+- Cognito: The always-free tier provides 10,000 Monthly Active Users (MAUs) (under the Essentials plan).
   Pepper's actual monthly bill could be **less than $5** for the entire first year.
 
 **Benefit 3: Automatic Scalability for Peak Times**
