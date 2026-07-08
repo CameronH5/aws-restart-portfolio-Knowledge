@@ -155,17 +155,5 @@ ls Employees
 
 
 
-7. I validated the final structure from CompanyA by running a recursive listing and confirmed:
 
-- Finance and Management were now under HR
-- Employees contained Assessments.csv and TrialPeriod.csv
-- Management still contained Managers.csv and Schedule.csv
-
-```bash
-cd ..
-ls -laR
-```
-
-
-
-End of lab write-up.
+End of Lab.
