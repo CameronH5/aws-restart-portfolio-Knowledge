@@ -10,7 +10,8 @@ Command I ran:
 ls -R CompanyA
 ```
 
-Screenshot: ![Image 5 — ls -R CompanyA](image5.png)
+<img width="678" height="426" alt="Screenshot 2026-06-18 193503" src="https://github.com/user-attachments/assets/d7d70e3e-e5a1-44fd-b286-04c972e94ff0" />
+
 
 ---
 
@@ -24,7 +25,8 @@ tar -csvpzf backup.CompanyAtar.gz CompanyA
 
 What I observed: tar listed each folder and file as it added them to the archive; the archive was created with the exact name I typed (backup.CompanyAtar.gz).
 
-Screenshot: ![Image 6 — tar output](image6.png)
+<img width="892" height="301" alt="Screenshot 2026-06-18 193625" src="https://github.com/user-attachments/assets/9388ce9a-0d1d-447f-b402-9ad826b91f4b" />
+
 
 ---
 
@@ -38,7 +40,8 @@ ls
 
 What I observed: the listing showed the archive file (backup.CompanyAtar.gz) alongside the CompanyA directory.
 
-Screenshot: ![Image 7 — ls showing archive](image7.png)
+<img width="470" height="57" alt="Screenshot 2026-06-18 193902" src="https://github.com/user-attachments/assets/6dc6c07b-dec6-473e-bd05-620e9f17006a" />
+
 
 ---
 
@@ -60,7 +63,9 @@ mv backup.CompanyAtar.gz backup.CompanyA.tar.gz
 
 What I observed: the file was successfully renamed to backup.CompanyA.tar.gz.
 
-Screenshot: ![Image 8 — mv error and rename](image8.png)
+<img width="897" height="265" alt="Screenshot 2026-06-18 193921" src="https://github.com/user-attachments/assets/b8685112-9923-4c95-a3cb-ed4c1edc238f" />
+
+
 
 
 **Note:** I fixed the earlier filename typo (backup.CompanyAtar.gz → backup.CompanyA.tar.gz) using `mv`.
@@ -77,7 +82,8 @@ cd /home/ec2-user/CompanyA
 
 What I observed: my prompt changed to indicate I was in `/home/ec2-user/CompanyA`.
 
-Screenshot: ![Image 9 — cd into CompanyA](image9.png)
+<img width="605" height="60" alt="Screenshot 2026-06-18 194051" src="https://github.com/user-attachments/assets/af9ef787-d99c-4908-ac93-6a4f76b76995" />
+
 
 ---
 
@@ -91,7 +97,8 @@ echo "18 June 2026, 19:42, backup.CompanyA.tar.gz" | sudo tee SharedFolders/back
 
 What I observed: the line printed to the terminal and was written to `SharedFolders/backups.csv`.
 
-Screenshot: ![Image 10 — echo | tee output](image10.png)
+<img width="1136" height="76" alt="Screenshot 2026-06-18 194319" src="https://github.com/user-attachments/assets/412f54e4-3ef2-4207-85ad-c601290d9514" />
+
 
 ---
 
@@ -105,7 +112,8 @@ cat SharedFolders/backups.csv
 
 What I observed: the file contained the new log line with date/time and the backup filename.
 
-Screenshot: ![Image 11 — cat backups.csv output](image11.png)
+<img width="726" height="61" alt="Screenshot 2026-06-18 194453" src="https://github.com/user-attachments/assets/623bd626-4dda-4a75-a641-41f301709457" />
+
 
 ---
 
@@ -121,7 +129,8 @@ ls -R IA
 
 What I observed: the working directory was `/home/ec2-user/CompanyA`; the archive was moved to `CompanyA/IA` and `ls` showed `backup.CompanyA.tar.gz` inside IA.
 
-Screenshot: ![Image 12 — pwd, mv, and ls IA output](image12.png)
+<img width="842" height="193" alt="Screenshot 2026-06-18 194634" src="https://github.com/user-attachments/assets/6ecee2ce-d644-4120-af16-a75cd2f2ac78" />
+
 
 ---
 
@@ -130,12 +139,3 @@ Screenshot: ![Image 12 — pwd, mv, and ls IA output](image12.png)
 - I created a compressed tar archive of the CompanyA directory, logged the backup with a timestamp in `SharedFolders/backups.csv`, and moved the archive to the IA folder so the IA team could access it.
 - I corrected a small filename typo (`backup.CompanyAtar.gz` → `backup.CompanyA.tar.gz`) using `mv` before moving the file.
 
-
-## Next steps / how you can finalize this document
-
-- Replace the image placeholders (image5.png … image12.png) with the actual screenshot file names once you upload them to the repository or provide their filenames.
-- If you want, I can also add the image files into the repository for you if you upload them here or provide a branch and confirm commit.
-
----
-
-*Generated: created by assistant on request.*
