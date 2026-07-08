@@ -1,10 +1,10 @@
 # Introduction to Linux
 
-## What is Linux?
+# What is Linux?
 
 Linux is a free, open-source operating system kernel created by Linus Torvalds in 1991. It's a Unix-like system that powers everything from servers and cloud infrastructure to desktops and embedded devices. In the context of cloud computing and AWS, Linux is the dominant operating system, making it an essential skill for any cloud practitioner.
 
-### Why Linux for Cloud?
+# Why Linux for Cloud?
 - **Server Infrastructure**: The majority of cloud servers run on Linux distributions
 - **AWS Integration**: EC2 instances, Lambda containers, and most AWS services run on Linux
 - **Cost-Effective**: Free and open-source means lower operational costs
@@ -13,7 +13,7 @@ Linux is a free, open-source operating system kernel created by Linus Torvalds i
 
 ## My Linux Learning Journey
 
-As part of the AWS Restart bootcamp, I'm building foundational knowledge in Linux administration and command-line operations. This is critical for cloud practitioner responsibilities including:
+As part of the AWS Restart bootcamp, I have built a foundational knowledge in Linux administration and command-line operations. This is critical for cloud practitioner responsibilities including:
 
 - Managing EC2 instances and cloud servers
 - Automating infrastructure tasks with scripts
