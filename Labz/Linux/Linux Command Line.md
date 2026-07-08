@@ -1,4 +1,4 @@
-# Task 2: Run Familiar Commands
+# Task: Run Familiar Commands
 
 In this exercise, I ran several commands to gain general knowledge about the system and session that I was using.
 
@@ -118,7 +118,7 @@ The output displayed my user ID (uid), group ID (gid), and all the groups that I
 
 ---
 
-# Task 3: Improve Workflow Through History and Search
+# Task: Improve Workflow Through History and Search
 
 In this task, I attempted to ease my overall workload by reusing commands through search techniques, manual visualization of the bash history log, and reuse of the last command.
 
