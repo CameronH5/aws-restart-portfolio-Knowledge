@@ -54,6 +54,7 @@ Retype new password:
 passwd: all authentication tokens updated successfully.
 [ec2-user@ip-10-0-10-100 ~]$
 ```
+<img width="616" height="150" alt="Screenshot 2026-06-18 173642" src="https://github.com/user-attachments/assets/dd3c8158-a816-4740-8a79-ff444bfefe16" />
 
 I entered the password `P@ssword1234!` twice as required.
 
