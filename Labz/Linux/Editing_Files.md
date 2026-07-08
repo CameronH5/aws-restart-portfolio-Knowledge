@@ -1,8 +1,9 @@
 # Editing Files - Task Completion
 
-## Task 2: Exercise - Run the Vim Tutorial
+## Task: Exercise - Run the Vim Tutorial
 
 In this exercise, I ran the Vimtutor application and followed all the directions in the file for tasks 1-4. Vimtutor is an application that teaches the basics of how to use Vim, which is one of the text editors for Linux.
+
 
 ### Step 1: Starting the Vimtutor Session
 
@@ -14,7 +15,8 @@ vimtutor
 
 **Screenshot of vimtutor startup:**
 
-![Vimtutor Welcome Screen](https://imgur.com/placeholder1.jpg)
+<img width="771" height="247" alt="Screenshot 2026-06-18 182420" src="https://github.com/user-attachments/assets/7b91d9b7-3456-4fe0-ad76-0e295b280d44" />
+
 
 I successfully launched the Vim tutorial and saw the welcome screen that explained Vim is a very powerful editor with many commands. The tutorial indicated it was designed to describe enough of the commands to easily use Vim as an all-purpose editor, with an approximate completion time of 30 minutes.
 
@@ -28,6 +30,10 @@ I entered `:q!` and pressed Enter to exit vimtutor and return to the main termin
 
 ---
 
+After the Vimtutor I first needed to see that vim was was installed before moving on to editing and creating a file.
+
+<img width="785" height="205" alt="Screenshot 2026-06-18 183138" src="https://github.com/user-attachments/assets/9dd470a9-a123-46cb-a0fa-ebaee793c6db" />
+
 ## Task 3: Exercise - Edit a File in Vim
 
 In this exercise, I used the Vim command-line editor program to create and edit a file using the following steps.
@@ -39,11 +45,6 @@ From my current location in the terminal, I entered `vim helloworld` and pressed
 ```bash
 vim helloworld
 ```
-
-**Screenshot showing file creation:**
-
-![Creating helloworld file with Vim](https://imgur.com/placeholder2.jpg)
-
 The terminal window displayed output from the command `vim helloworld`, showing Vim was opened and ready for editing.
 
 ### Step 2: Entering Text in Insert Mode
@@ -57,7 +58,8 @@ This is my first file in Linux and I am editing it in Vim!
 
 **Screenshot of file content in Vim:**
 
-![Editing helloworld in Vim](https://imgur.com/placeholder3.jpg)
+<img width="630" height="75" alt="Screenshot 2026-06-18 183106" src="https://github.com/user-attachments/assets/3b07827c-d469-4ece-92fb-17e30fa51a10" />
+
 
 I successfully added the text to the helloworld file. The cursor was positioned at the beginning of the new lines, and the text appeared exactly as I typed it.
 
@@ -79,9 +81,7 @@ I was back in the main terminal. I used Vim to go back to the `helloworld` file 
 vim helloworld
 ```
 
-**Screenshot of reopening helloworld:**
 
-![Reopening helloworld with Vim](https://imgur.com/placeholder4.jpg)
 
 ### Step 5: Adding Additional Content
 
@@ -90,10 +90,6 @@ I was back in the file that I previously created called `helloworld`. I used Vim
 ```
 I learned how to create a file, edit and save them too!
 ```
-
-**Screenshot showing the second edit:**
-
-![Second edit in helloworld](https://imgur.com/placeholder5.jpg)
 
 The terminal displayed the content I had previously entered in the helloworld file. The second line now displayed the new text I added to the file.
 
@@ -157,10 +153,6 @@ Similar to Vim, in the main terminal, I entered `nano cloudworld` and pressed En
 nano cloudworld
 ```
 
-**Screenshot showing nano editor:**
-
-![Editing cloudworld in nano](https://imgur.com/placeholder6.jpg)
-
 The terminal window displayed the command nano followed by the word cloudworld. Unlike Vim, I did not have to enter insert mode. Instead, I could start typing immediately.
 
 ### Step 2: Entering Text
@@ -170,6 +162,8 @@ Now that I was in the file I created called `cloudworld`, unlike Vim, I did not 
 ```
 We are using nano this time! We can simply start typing! No insert mode needed.
 ```
+
+<img width="813" height="521" alt="Screenshot 2026-06-18 184115" src="https://github.com/user-attachments/assets/92ca41db-5c99-48c2-9d55-c69963fbda9a" />
 
 I successfully added the text to the cloudworld file while in the nano editor. The nano interface showed the file content with the text I typed displayed on the screen, and at the bottom of the terminal, the keyboard shortcuts for common nano commands were visible.
 
