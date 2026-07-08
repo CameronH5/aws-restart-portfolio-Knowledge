@@ -16,10 +16,7 @@ This document outlines the business profile, operational challenges, technical s
 **Customer Base:** A loyal, tight-knit community of local residents, families, nearby retail workers, and students from the surrounding area. 
 
 **Operational Status & Volume:**
-Salt & Pepper is a staple in the Khayelitsha community. It is exceptionally busy during weekday lunch hours, after work (4 PM – 6 PM), and particularly on weekends when families come out to eat. On a typical busy day, they handle:
-- **40–60 dine-in covers** across their small indoor and outdoor seating.
-- **50–70 takeaway orders**, which are overwhelmingly placed via **phone calls and WhatsApp messages**.
-- **Multiple large family meal pre-orders** for weekends and local community gatherings.
+Salt & Pepper is a staple in the Khayelitsha community. It is exceptionally busy during weekday lunch hours, after work (4 PM – 9PM), and particularly on weekends when families come out to eat. 
 
 **The Current Manual System:**
 Currently, Salt & Pepper runs on a fragile manual workflow:
@@ -34,7 +31,7 @@ Currently, Salt & Pepper runs on a fragile manual workflow:
 While the restaurant is loved by the community, the lack of digital infrastructure is creating severe friction, threatening customer satisfaction and staff morale. Here is a deep-dive into their current struggles:
 
 **Challenge 1: Constant Order Mix-ups & Customer Frustration**
-- **The Problem**: With over 50 takeaway orders arriving via phone and WhatsApp daily, handwriting errors are incredibly common. A customer ordering a "Chicken Stew" might receive a "Beef Stew" because the paper slip was illegible. 
+- **The Problem**: With over a lot of takeaway orders arriving via phone and WhatsApp daily, handwriting errors are incredibly common. A customer ordering a "Chicken Stew" might receive a "Beef Stew" because the paper slip was illegible. 
 - **Community Impact**: In a close-knit neighborhood like Khayelitsha, word of mouth is everything. Repeated order mistakes cause frustrated customers to take their business to competitors, and the owner cannot afford to lose regulars.
 
 **Challenge 2: The "Paper-Diary" Booking Nightmare**
@@ -46,7 +43,7 @@ While the restaurant is loved by the community, the lack of digital infrastructu
 - **Lost Revenue**: When a customer calls to say, *"I brought my family here last Saturday and ordered the large platter—can I get the same one again this weekend?"*, the staff have no way to check the record. They cannot build loyalty programs, send birthday discounts, or track dietary preferences.
 
 **Challenge 4: Inability to Scale for Community Events**
-- **The Problem**: Khayelitsha hosts numerous community events, celebrations, and soccer match days. During these surges, the phone rings off the hook. To handle the load, the owner faces an impossible choice: either refuse orders and lose money, or spend a huge amount of money hiring additional temporary staff just to answer phones—which they can't afford on a small business budget.
+- **The Problem**: Khayelitsha hosts numerous community events, celebrations, and soccer match days. During these surges, the phone could ring off the hook. To handle the load, the owner faces an impossible choice: either refuse orders and lose money, or spend a huge amount of money hiring additional temporary staff just to answer phones—which they can't afford on a small business budget.
 
 ---
 
