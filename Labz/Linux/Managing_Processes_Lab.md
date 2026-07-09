@@ -133,7 +133,6 @@ What I also did:
 - I executed `top -hv` to display the help and version information for the `top` command.
 - The output showed that `procps-ng version 3.3.10` was installed and displayed the usage syntax and options available for the `top` command.
 
-<img width="831" height="126" alt="Screenshot 2026-06-19 152351" src="https://github.com/user-attachments/assets/d032c294-fb74-4b92-a183-c38abafcd665" />
 
 
 Notes:
@@ -153,18 +152,6 @@ Notes:
 - The `MAILTO` variable specifies the email address where cron job output should be sent; setting it to `root` will send all output to the root user's mailbox.
 - The `crontab -l` command displays the current crontab entries, allowing you to verify that your cron job has been properly installed.
 
----
-
-## Commands Recap (what I ran)
-
-- `pwd` — confirmed my working directory was `/home/ec2-user`. (Image 4)
-- `cd /home/ec2-user/companyA` — navigated to the working directory. (Image 8)
-- `sudo ps -aux | grep -v root | sudo tee SharedFolders/processes.csv` — created a process listing log file. (Image 4)
-- `cat SharedFolders/processes.csv` — validated the process log file contents. (Image 4)
-- `top` — displayed system performance and active processes. (Image 5)
-- `top -hv` — displayed the help and version information for the `top` command. (Image 9)
-- `sudo crontab -l` — checked for existing crontab entries and later validated the installed cron job. (Image 8)
-- `sudo crontab -e` — opened the crontab editor to create and install a new cron job. (Image 8)
 
 ---
 
