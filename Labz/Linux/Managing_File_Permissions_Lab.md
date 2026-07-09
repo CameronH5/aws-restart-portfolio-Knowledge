@@ -17,6 +17,8 @@ In this lab, I completed the following objectives:
 ```bash
 sudo chown -R mjackson:Personnel /home/ec2-user/companyA
 ```
+<img width="810" height="57" alt="Screenshot 2026-06-18 200247" src="https://github.com/user-attachments/assets/fcf3ff6b-e0e9-40f8-be1f-65ec5bb7241d" />
+
 
 **What This Did:**
 - Used `sudo chown -R` to recursively change ownership of the companyA directory and all its contents
@@ -35,6 +37,8 @@ sudo chown -R mjackson:Personnel /home/ec2-user/companyA
 ```bash
 sudo chown -R mmajor:HR HR
 ```
+<img width="552" height="23" alt="Screenshot 2026-06-18 200259" src="https://github.com/user-attachments/assets/6fc2f7e9-e51a-4563-ac2b-42eba12e4928" />
+
 
 **What This Did:**
 - Changed the **user owner** to `mmajor` (the HR manager)
@@ -52,6 +56,8 @@ sudo chown -R mmajor:HR HR
 ```bash
 sudo chown -R mmajor:Finance HR/Finance
 ```
+<img width="776" height="47" alt="Screenshot 2026-06-18 200314" src="https://github.com/user-attachments/assets/b3812bdb-e2d2-4b2e-8994-5e5e8359d1f4" />
+
 
 **What This Did:**
 - Changed the **user owner** to `mmajor` (the finance manager)
@@ -90,6 +96,8 @@ drwxr-xr-x  2 mjackson Personnel   6 Jun 18 17:55 Shipping
 total 0
 drwxr-xr-x  2 mjackson Personnel   6 Jun 18 17:55 .
 ```
+<img width="816" height="388" alt="Screenshot 2026-06-18 200341" src="https://github.com/user-attachments/assets/d879f948-3254-4f1f-a8a5-8758e3c94e24" />
+
 
 **Validation Results:**
 ✅ All top-level folders are owned by mjackson (CEO) with Personnel group
@@ -129,6 +137,8 @@ sudo vi absolute_mode_file
 # Save and close the file (ESC, then :wq, then Enter)
 sudo chmod 764 absolute_mode_file
 ```
+<img width="762" height="102" alt="Screenshot 2026-06-18 200659" src="https://github.com/user-attachments/assets/9284c3dd-0eef-4daf-8a06-622c7a8e8ac1" />
+
 
 **What This Did:**
 - Created an empty file named `absolute_mode_file` using vi editor
@@ -169,6 +179,8 @@ drwxr-xr-x 2 mjackson   Personnel           24 Jun 18 17:55 SharedFolders
 drwxr-xr-x 2 mjackson   Personnel            6 Jun 18 17:55 Shipping
 -rw-r--r-- 1 root       root                 0 Jun 18 18:05 symbolic_mode_file
 ```
+<img width="777" height="283" alt="Screenshot 2026-06-18 200718" src="https://github.com/user-attachments/assets/0fa5804f-7341-49ac-8924-22bc12ebb8ba" />
+
 
 **Verification Results:**
 ✅ **absolute_mode_file** shows `-rwxrw-r--` which is exactly 764 permissions
@@ -208,6 +220,8 @@ sudo chown -R eowusu:Shipping Shipping
 ```bash
 sudo chown -R nwilf:Sales Sales
 ```
+<img width="806" height="70" alt="Screenshot 2026-06-18 200908" src="https://github.com/user-attachments/assets/2de86c79-5ed6-4faa-87cc-5ee798b73548" />
+
 
 **What This Did:**
 - Changed the **user owner** to `nwilf` (the sales manager)
@@ -239,6 +253,9 @@ total 0
 drwxr-xr-x  2 nwilf     Sales                 6 Jun 18 17:55 .
 drwxr-xr-x 10 mjackson Personnel            199 Jun 18 18:06 ..
 ```
+
+<img width="542" height="226" alt="Screenshot 2026-06-18 201003" src="https://github.com/user-attachments/assets/65eae540-2bd7-4d80-9551-c3ea3643d7e2" />
+
 
 **Validation Results:**
 ✅ **Shipping folder** is now owned by `eowusu` with group `Shipping`
