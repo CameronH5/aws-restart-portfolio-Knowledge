@@ -31,8 +31,8 @@ What I did and what happened:
 - I executed `hostname | tee file1.txt`. The instance hostname printed to the terminal and the same hostname was written into `file1.txt`.
 - I ran `ls` to verify that `file1.txt` existed alongside other items in the directory.
 
-Insert screenshot (Image 4) here to show the hostname output and the `ls` verification:
-![Image 4 - tee output and ls verification](images/image4.png)
+<img width="567" height="108" alt="Screenshot 2026-06-19 145951" src="https://github.com/user-attachments/assets/3415b648-6c47-4419-8024-4941b6bb49fc" />
+
 
 ---
 
@@ -58,17 +58,17 @@ sort test.csv
 cat test.csv | grep Paris
 # (or) find | grep Paris test.csv
 ```
+<img width="538" height="173" alt="Screenshot 2026-06-19 150328" src="https://github.com/user-attachments/assets/ef061c85-42b1-4b5e-a0e1-d6c1e2414205" />
 
 What I did and what happened:
 - I created `test.csv` with five records and saved it.
 - I ran `sort test.csv`. The `sort` command read the file and printed a sorted version to stdout; the output grouped similar prefixes (e.g., "Factory") and ordered entries according to default lexical rules.
 - I piped the file contents to `grep` to search for the record containing "Paris" and the pipeline returned the matching line.
 
-Insert screenshot (Image 5) here showing the sorted output:
-![Image 5 - sort output](images/image5.png)
+<img width="497" height="143" alt="Screenshot 2026-06-19 150352" src="https://github.com/user-attachments/assets/f729764a-eb29-4dd1-a740-4fbedb4a75e9" />
 
-Insert screenshot (Image 7) here showing the grep/pipeline result for Paris:
-![Image 7 - grep Paris result](images/image7.png)
+<img width="577" height="72" alt="Screenshot 2026-06-19 150434" src="https://github.com/user-attachments/assets/765fd256-8bcf-484e-9bff-c5bc1799ff62" />
+
 
 Notes:
 - `sort` printed the reordered list to stdout and did not modify `test.csv` unless you redirected output back into the file.
@@ -105,8 +105,8 @@ What I did and what happened:
   - Atlanta
   - New York
 
-Insert screenshot (Image 8) here showing the `cat`/`cut` commands and the extracted city names:
-![Image 8 - created file and cut output](images/image8.png)
+<img width="618" height="267" alt="Screenshot 2026-06-19 150651" src="https://github.com/user-attachments/assets/763792b9-c930-43b3-abc9-ff94015d3276" />
+
 
 Notes:
 - `cut` printed the extracted fields to stdout and did not modify the original file.
@@ -143,13 +143,13 @@ What I did and what happened:
   - Atlanta. Georgia
   - New York. New York
 
-Insert screenshot (Image 9) here showing the `sed` result for `cities.csv`:
-![Image 9 - sed output for cities.csv](images/image9.png)
+<img width="568" height="148" alt="Screenshot 2026-06-19 150752" src="https://github.com/user-attachments/assets/8f6710b6-7596-420c-9f21-cb00cd06ce16" />
+
 
 - I ran `sed 's/,/./' test.csv`. `sed` replaced the first comma on each line in `test.csv` with a period and printed the results to stdout (e.g., `Factory. 1, Paris` etc.).
 
-Insert screenshot (Image 10) here showing the `sed` result for `test.csv`:
-![Image 10 - sed output for test.csv](images/image10.png)
+<img width="565" height="152" alt="Screenshot 2026-06-19 150818" src="https://github.com/user-attachments/assets/a7bfe4bc-c46e-4a41-bd0d-b90d1f29ffa4" />
+
 
 Notes and important details:
 - By default `sed 's/old/new/'` replaces only the first occurrence of the pattern on each line. To replace all occurrences on a line use the `g` flag: `sed 's/,/./g'`.
@@ -178,8 +178,4 @@ Notes and important details:
 - I created `cities.csv` and used `cut` to extract the city names.
 - I used `sed` to replace commas with periods on each line (for the first comma), and noted how to replace all commas and make changes in-place when desired.
 
----
 
-If you would like, I can:
-- replace the placeholder image paths with actual GitHub blob URLs for each screenshot, or
-- make the `sed` substitutions permanent in the files and include the resulting files in the repo (if you tell me where you will commit the screenshots and whether I should create or update the .md file in the repo directly).
