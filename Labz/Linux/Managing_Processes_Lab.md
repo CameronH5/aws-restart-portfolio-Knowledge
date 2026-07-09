@@ -35,7 +35,11 @@ What I did and what happened:
 - The processes displayed included USER, PID, %CPU, %MEM, VSZ, RSS, TTY, STAT, START, TIME, and COMMAND columns.
 - I validated my work by executing `cat SharedFolders/processes.csv`, which displayed the contents of the file I had just created.
 
-![Image 4 - Process listing and file creation](images/image4.png)
+<img width="455" height="60" alt="Screenshot 2026-06-19 152159" src="https://github.com/user-attachments/assets/240311c3-4d5d-4b03-8d34-6e366acc4268" />
+
+<img width="802" height="443" alt="Screenshot 2026-06-19 152146" src="https://github.com/user-attachments/assets/e2f58305-1d85-4d88-955b-a070c18c4591" />
+
+
 
 Notes:
 - The `ps -aux` command displays all running processes with detailed information (user, PID, CPU percentage, memory usage, VSZ, RSS, TTY, STAT, START, TIME, and COMMAND).
@@ -66,7 +70,9 @@ What I did and what happened:
 - The process table displayed detailed information for each running process, including PID, USER, PR (priority), NI (nice value), VIRT (virtual memory), RES (resident memory), SHR (shared memory), %CPU, %MEM, TIME+, and COMMAND.
 - I observed various system processes including systemd, kthreadd, kworker processes, migration processes, rcu_sched, rcu_bh, and other kernel and user-space services.
 
-![Image 5 - top command output showing system performance](images/image5.png)
+<img width="931" height="602" alt="Screenshot 2026-06-19 152256" src="https://github.com/user-attachments/assets/2890b9e2-ce0b-4627-8a6b-92eadc9da598" />
+
+
 
 Notes:
 - The `top` command is used to display system performance and lists the processes and threads that are active in the system.
@@ -118,14 +124,17 @@ What I did and what happened:
 - The system displayed "crontab: installing new crontab" message, confirming that the crontab was successfully created and installed.
 - I saved and closed the file by pressing ESC, then typing `:wq` and pressing Enter to save the changes.
 - I validated my work by executing `sudo crontab -l` to display the contents of the installed crontab file.
+<img width="788" height="146" alt="Screenshot 2026-06-19 153229" src="https://github.com/user-attachments/assets/fc1c16e4-ed9b-4139-be97-3eecb776b450" />
 
-![Image 8 - Cron job creation and installation](images/image8.png)
+<img width="882" height="137" alt="Screenshot 2026-06-19 153214" src="https://github.com/user-attachments/assets/86fd1278-a542-426c-83cc-95800e904a3c" />
+
 
 What I also did:
 - I executed `top -hv` to display the help and version information for the `top` command.
 - The output showed that `procps-ng version 3.3.10` was installed and displayed the usage syntax and options available for the `top` command.
 
-![Image 9 - top command help and version information](images/image9.png)
+<img width="831" height="126" alt="Screenshot 2026-06-19 152351" src="https://github.com/user-attachments/assets/d032c294-fb74-4b92-a183-c38abafcd665" />
+
 
 Notes:
 - The `crontab` is a command that runs a task on a regular basis at a specified time. This command maintains the list of tasks to run in a crontab file, which you create in this task.
