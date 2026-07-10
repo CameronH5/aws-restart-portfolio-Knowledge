@@ -27,12 +27,14 @@ backup backup_companyA.tar.gz CompanyA
 
 - The `tar` command listed all of `CompanyA`’s contents as it added them to the archive.
 
+<img width="725" height="373" alt="Screenshot 2026-06-19 160259" src="https://github.com/user-attachments/assets/fdff382f-2358-4782-b933-cfcf2a2e4582" />
 
 
 3. Verified the tarball was created
 
 - After creating the archive I ran `ls` and confirmed `backup_companyA.tar.gz` and the `CompanyA` directory were present in the working folder.
 
+<img width="380" height="82" alt="Screenshot 2026-06-19 160317" src="https://github.com/user-attachments/assets/4116b23f-e36d-4a0a-b25a-9c0cd6c43fd3" />
 
 
 4. Navigated to CompanyA/bin and ran the script directly
@@ -51,9 +53,8 @@ cd /home/ec2-user/CompanyA/bin
 
 - The script printed: `Hello ec2-user`.
 
-<!-- Image 6: ./hello.sh produced the expected output -->
+<img width="610" height="87" alt="Screenshot 2026-06-19 160445" src="https://github.com/user-attachments/assets/39be6ba1-1a0d-41a0-a51d-283599350f19" />
 
-![Run script in bin (Image 6)](images/image6.png)
 
 5. Moved up one level and demonstrated running with a relative path
 
@@ -61,9 +62,9 @@ cd /home/ec2-user/CompanyA/bin
 
 - From there I ran the script with the relative path `./bin/hello.sh` and it again printed `Hello ec2-user`.
 
-<!-- Image 7: Returned to parent directory with cd .. (run ./bin/hello.sh after this image) -->
+<img width="382" height="26" alt="Screenshot 2026-06-19 160507" src="https://github.com/user-attachments/assets/a73c17bf-4187-4fd3-8a56-f35d0404499d" />
+<img width="522" height="37" alt="Screenshot 2026-06-19 160541" src="https://github.com/user-attachments/assets/2b385545-a711-4c54-953d-ef9acb86d88b" />
 
-![cd .. and relative run (Image 7)](images/image7.png)
 
 6. Attempted to run the script by name and diagnosed PATH
 
@@ -71,13 +72,12 @@ cd /home/ec2-user/CompanyA/bin
 
 - I displayed the `PATH` value with `echo $PATH` and confirmed that `/home/ec2-user/CompanyA/bin` was not present in the PATH list.
 
-<!-- Image 9: failed hello.sh attempt and command not found -->
+<img width="457" height="47" alt="Screenshot 2026-06-19 160559" src="https://github.com/user-attachments/assets/d8cc5b57-d4ff-40a4-b516-3faff2db4e8d" />
 
-![Failed run by name (Image 9)](images/image9.png)
+<img width="807" height="67" alt="Screenshot 2026-06-19 160620" src="https://github.com/user-attachments/assets/3fecf76c-ab0f-4903-9cca-8e749235b1be" />
 
-<!-- Image 10: echo $PATH output showing the PATH entries -->
 
-![PATH output (Image 10)](images/image10.png)
+
 
 7. Updated PATH and ran the script by name
 
@@ -89,8 +89,6 @@ PATH=$PATH:/home/ec2-user/CompanyA/bin
 
 - After updating `PATH`, I re-ran `hello.sh` by typing `hello.sh` and it printed `Hello ec2-user`, confirming the shell now found the executable in the newly added `PATH` entry.
 
-<!-- Image 11: PATH update and successful hello.sh run -->
-
-![PATH update and successful run (Image 11)](images/image11.png)
+<img width="755" height="95" alt="Screenshot 2026-06-19 160729" src="https://github.com/user-attachments/assets/5fc8aac3-b1d2-4ba0-99bc-d065d9124c11" />
 
 ---
