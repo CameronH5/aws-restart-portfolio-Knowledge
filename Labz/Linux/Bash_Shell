@@ -1,0 +1,96 @@
+
+## Bash Shell — Create an alias and update PATH
+
+### Objectives
+
+In this section, I created and used an alias to back up a folder and I updated the `PATH` environment variable so I could run a script by name.
+
+### What I did:
+
+1. Confirmed my working directory
+
+- I ran `pwd` to confirm I was in my home folder (`/home/ec2-user`).
+
+2. Created the backup alias and produced the archive
+
+- I defined an alias named `backup` that invoked `tar` with the create, verbose, gzip, and file options. For example:
+
+```bash
+alias backup='tar -cvzf'
+```
+
+- I then used that alias to create a compressed archive of the `CompanyA` folder by running:
+
+```bash
+backup backup_companyA.tar.gz CompanyA
+```
+
+- The `tar` command listed all of `CompanyA`’s contents as it added them to the archive.
+
+
+
+3. Verified the tarball was created
+
+- After creating the archive I ran `ls` and confirmed `backup_companyA.tar.gz` and the `CompanyA` directory were present in the working folder.
+
+
+
+4. Navigated to CompanyA/bin and ran the script directly
+
+- I changed into the bin folder:
+
+```bash
+cd /home/ec2-user/CompanyA/bin
+```
+
+- From that directory I executed the script with:
+
+```bash
+./hello.sh
+```
+
+- The script printed: `Hello ec2-user`.
+
+<!-- Image 6: ./hello.sh produced the expected output -->
+
+![Run script in bin (Image 6)](images/image6.png)
+
+5. Moved up one level and demonstrated running with a relative path
+
+- I moved to the parent directory using `cd ..` (returning to `/home/ec2-user/CompanyA`).
+
+- From there I ran the script with the relative path `./bin/hello.sh` and it again printed `Hello ec2-user`.
+
+<!-- Image 7: Returned to parent directory with cd .. (run ./bin/hello.sh after this image) -->
+
+![cd .. and relative run (Image 7)](images/image7.png)
+
+6. Attempted to run the script by name and diagnosed PATH
+
+- From `/home/ec2-user/CompanyA` I attempted to run `hello.sh` by typing `hello.sh`. The shell returned `-bash: hello.sh: command not found` because `/home/ec2-user/CompanyA/bin` was not in my `PATH`.
+
+- I displayed the `PATH` value with `echo $PATH` and confirmed that `/home/ec2-user/CompanyA/bin` was not present in the PATH list.
+
+<!-- Image 9: failed hello.sh attempt and command not found -->
+
+![Failed run by name (Image 9)](images/image9.png)
+
+<!-- Image 10: echo $PATH output showing the PATH entries -->
+
+![PATH output (Image 10)](images/image10.png)
+
+7. Updated PATH and ran the script by name
+
+- I appended the CompanyA `bin` directory to `PATH` for the session with:
+
+```bash
+PATH=$PATH:/home/ec2-user/CompanyA/bin
+```
+
+- After updating `PATH`, I re-ran `hello.sh` by typing `hello.sh` and it printed `Hello ec2-user`, confirming the shell now found the executable in the newly added `PATH` entry.
+
+<!-- Image 11: PATH update and successful hello.sh run -->
+
+![PATH update and successful run (Image 11)](images/image11.png)
+
+---
