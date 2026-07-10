@@ -1,4 +1,3 @@
-
 # Project 1 - Praesignis AWS re/Start: Salt & Pepper Restaurant
 ### Section 3.2: AWS Services Presentation & Migration Analysis
 
@@ -11,38 +10,48 @@ This document outlines the business profile, operational challenges, technical s
 **Business Name:** Salt & Pepper Restaurant
 **Location:** 9 Yusuf Arafat Crescent, Khayelitsha, Cape Town, 7784
 **Established:** 2016
-**Core Offering:** A beloved local eatery serving hearty, affordable meals. Their menu blends traditional South African favorites (like hearty stews, pap, and grilled meats) with modern casual dining options like burgers, wraps, and freshly prepared salads. 
-**Customer Base:** A loyal, tight-knit community of local residents, families, nearby retail workers, and students from the surrounding area. 
+**Core Offerings:** A beloved local eatery serving hearty, affordable meals. Their menu blends traditional South African favorites (like hearty stews, pap, and grilled meats) with modern casual dining options like burgers, wraps, and freshly prepared salads. Alongside its culinary servings, Salt and Pepper hosts weekly Games Nights, where guests can enjoy chess, 30 Seconds, Jenga, card games, and snakes and ladders.
 
-**Operational Status & Volume:**
-Salt & Pepper is a staple in the Khayelitsha community. It is exceptionally busy during weekday lunch hours, after work (4 PM – 9PM), and particularly on weekends when families come out to eat. 
+**Customer Base:** A loyal, tight-knit community of local residents, families, nearby retail workers, and students from the surrounding area. Beyond its local circle, Salt & Pepper also welcomes tourists from around the world who are drawn to Cape Town and eager to experience Khayelitsha which the largest township in the Western Cape Province.
+
+**Operational Status & Volume:** Salt & Pepper is a staple in the Khayelitsha community. It is exceptionally busy during weekday lunch hours, after work (4 PM – 9PM), and particularly on weekends when families and friends come out to eat. Salt & Pepper also experiences peak hours every other day between 12 PM and 3 PM, when tourist groups of 10–15 stop by as part of their Khayelitsha township tours.
 
 **The Current Manual System:**
 Currently, Salt & Pepper runs on a fragile manual workflow:
 1.  **Booking**: The only way to secure a table is via phone call or a WhatsApp message, which is written down on a shared paper diary by whichever staff member is closest to the phone.
-2.  **Takeaway Orders**: Customers call in or send a WhatsApp. Staff frantically scribble these onto paper slips, which are then handed to the kitchen. 
+2.  **Takeaway Orders**: Customers call in or send a WhatsApp. Staff frantically scribble these onto paper slips, which are then handed to the kitchen.
 3.  **Inventory & Payments**: There is no central digital record connecting a phone order to the kitchen's cooking progress or to the payment terminal at the front counter.
+4.  **Daily manual reconciliation of cash flow and digital transactions**: Cash Tills have to be counted daily and reconciled with the digital transactions. However, the current booking system's dependence on a paper diary increases the likelihood of human error, delayed updates and discrepancies between recorded and actual transactions.
 
 ---
 
 ### 3.2.2. Restaurant Challenges (Deep Dive Analysis)
 
-While the restaurant is loved by the community, the lack of digital infrastructure is creating severe friction, threatening customer satisfaction and staff morale. Here is a deep-dive into their current struggles:
+While the restaurant is loved by the community, the lack of digital infrastructure is creating severe friction, threatening customer satisfaction and staff morale. Tourists often arrive in groups without prior confirmation, leaving the restaurant unable to plan for peak hours. Similarly, without a booking system for Games Nights, staff cannot anticipate how many customers will participate. Here is a deep-dive into their current struggles:
 
 **Challenge 1: Constant Order Mix-ups & Customer Frustration**
-- **The Problem**: With over a lot of takeaway orders arriving via phone and WhatsApp daily, handwriting errors are incredibly common. A customer ordering a "Chicken Stew" might receive a "Beef Stew" because the paper slip was illegible. 
-- **Community Impact**: In a close-knit neighborhood like Khayelitsha, word of mouth is everything. Repeated order mistakes cause frustrated customers to take their business to competitors, and the owner cannot afford to lose regulars.
+- **The Problem**: With over a lot of takeaway orders arriving via phone and WhatsApp daily, handwriting errors are incredibly common. A customer ordering a "Chicken Stew" might receive a "Beef Stew" because the paper slip was illegible.
+- **Community Impact**: In a close-knit neighbourhood like Khayelitsha, word of mouth is everything. Repeated order mistakes cause frustrated customers to take their business to competitors, and the owner cannot afford to lose regulars.
 
 **Challenge 2: The "Paper-Diary" Booking Nightmare**
 - **The Problem**: The restaurant has limited seating, and peak weekends are heavily oversubscribed. The current paper diary frequently has pages ripped out, erased, or overlapping entries. This leads to embarrassing double-bookings where two families arrive at the exact same time for the only remaining table.
 - **Staff Distraction**: Staff are constantly answering phone calls mid-service, neglecting the paying customers sitting right in front of them, leading to slow service and a chaotic atmosphere.
 
-**Challenge 3: Zero Visibility into Customer Data and Trends**
-- **The Problem**: Because every transaction is a paper slip, the owner has absolutely no data to work with. They don't know which dish is their best-seller, which days of the week are their absolute busiest, or who their repeat customers are. 
-- **Lost Revenue**: When a customer calls to say, *"I brought my family here last Saturday and ordered the large platter—can I get the same one again this weekend?"*, the staff have no way to check the record. They cannot build loyalty programs, send birthday discounts, or track dietary preferences.
+**Challenge 3: Game Night Demand Exceeds Capacity & Limits Customer Experience**
+- **The Problem**: Weekly Games Nights attract high participation, but without a digital booking system, the restaurant cannot confirm attendance or manage demand. Customers often risk missing out entirely, or must shorten playtime to accommodate others. Seating arrangements become strained, especially for larger groups, and the lack of clarity on whether Games Night carries a fee adds further confusion.
+- **Impact**: Customer dissatisfaction grows due to poor service delivery, unpredictable crowd sizes, and understaffing. Longer wait times for food and limited participation in games diminish the overall experience, undermining the restaurant's reputation for community engagement.
 
-**Challenge 4: Inability to Scale for Community Events**
-- **The Problem**: Khayelitsha hosts numerous community events, celebrations, and soccer match days. During these surges, the phone could ring off the hook. To handle the load, the owner faces an impossible choice: either refuse orders and lose money, or spend a huge amount of money hiring additional temporary staff just to answer phones—which they can't afford on a small business budget.
+**Challenge 4: Zero Visibility into Customer Data and Trends**
+- **The Problem**: Because every transaction is a paper slip, the owner has absolutely no data to work with. They don't know which dish is their best-seller, which days of the week are their absolute busiest, or who their repeat customers are.
+- **Lost Revenue**: When a customer calls to say, "I brought my family here last Saturday and ordered the large platter—can I get the same one again this weekend?", the staff have no way to check the record. They cannot build loyalty programs, send birthday discounts or track dietary preferences.
+
+**Challenge 5: Inefficient Cash Flow Tracking**
+- **The Problem**: Manual reconciliation combined with paper-based booking records makes it difficult to monitor cash transactions in real time. Errors such as missed entries, duplicate charges, or unrecorded payments can occur, especially during peak hours. This creates gaps in financial reporting and exposes the business to revenue leakage.
+- **Impact**: Beyond direct revenue loss, the restaurant faces challenges in budgeting, forecasting, and maintaining accountability, which can erode trust among staff and customers.
+
+**Challenge 6: Inability to Scale for Community Events**
+- **The Problem**: Khayelitsha hosts numerous community events, celebrations, and soccer match days. During these surges, the phone could ring off the hook. There is also one worker handling calls meaning that if 3 customers call at the same time, the 'receptionist' can only handle one. Furthermore, this affects the timing of when the WhatsApp orders are received, noted down, prepared and even delivered.
+- **To handle the load**, the owner faces an impossible choice: either refuse orders and lose money, or spend a huge amount of money hiring additional temporary staff just to answer phones—which they can't afford on a small business budget.
 
 ---
 
@@ -51,24 +60,25 @@ While the restaurant is loved by the community, the lack of digital infrastructu
 To solve these challenges without breaking the bank, we will deploy a **Serverless AWS Architecture**. This allows Salt & Pepper to pay *only pennies per order*, and requires zero technical maintenance from the owner.
 
 **1. Front-End Hosting & Content Distribution**
-- **Amazon S3**: Hosts the fully static website (HTML/CSS/JS). This will display a clean, user-friendly menu, a Table Booking form, and a Takeaway Order form.
+- **Amazon S3**: Hosts the fully static website (HTML/CSS/JS). This will display a clean, user-friendly menu, a Table Booking form, and a Takeaway Order form. S3 can also store digital transaction logs, scanned receipts, and reconciliation reports securely, ensuring all records are centralized and accessible.
 - **Amazon CloudFront**: Speeds up website loading for all customers in Khayelitsha and the broader Cape Town area. It also provides a free SSL certificate, ensuring customers' personal information (like phone numbers) is sent securely.
 
 **2. Back-End Logic & Processing**
 - **Amazon API Gateway**: Provides a secure, public URL that receives the data submitted from the website's forms.
-- **AWS Lambda**: Serverless code that processes the incoming form data. The Lambda function validates the booking time (ensuring no double-bookings), formats the data, and securely writes it into the database.
+- **AWS Lambda**: Serverless code that processes the incoming form data. The Lambda function validates the booking time (ensuring no double-bookings), formats the data, and securely writes it into the database. It can further assist by automating reconciliation tasks by triggering functions that compare cash entries against digital transactions, flagging discrepancies instantly.
 
 **3. Data Storage & Management**
 - **Amazon DynamoDB**: A high-performance NoSQL database. We use this instead of a traditional SQL database because it scales automatically and costs nothing when it isn't being used. It will store three distinct tables:
   - `Bookings` (Date, Time, Party Size, Contact Number)
   - `Orders` (Customer name, Dish selected, Pickup time, Status - "Cooking/Ready")
-  - `CustomerProfiles` (Phone number, address, favorite dishes)
+  - `Customer Profiles` (Phone number, address, favourite dishes)
+- **Amazon Relational Database Service (RDS)**: Bookings and takeaway orders can be logged in realtime which means that the staff can query the database instantly to see current reservations, available slots, and expected group sizes. This solves the uncertainty that comes with the use of paper diaries. It can further provide a live dashboard of cash vs. digital transactions, allowing managers to track performance and detect anomalies during peak hours.
 
 **4. User Authentication**
-- **Amazon Cognito**: Allows repeat customers to create a simple password-protected profile. When they log in, their phone number and address are automatically populated into the order form. This saves time and improves the user experience.
+- **Amazon Cognito**: Allows repeat customers to create a simple password-protected profile. When they log in, their phone number and address are automatically populated into the order form. This saves time and improves the user experience. By leveraging Cognito, Salt & Pepper can create a loyalty program that rewards repeat customers with exclusive promotions; whether for meals or Games Nights. This recognition can extend to tour operators and returning tourist groups who consistently make Salt & Pepper part of their Khayelitsha experience.
 
 **5. Automated Notifications & Communications**
-- **Amazon Simple Notification Service (SNS)**: Triggers an **instant SMS message** to the restaurant owner's and kitchen staff's phones whenever a new takeaway order or booking is submitted online. No more checking a computer screen—they are alerted immediately.
+- **Amazon Simple Notification Service (SNS)**: Triggers an instant SMS message to the restaurant owner's and kitchen staff's phones whenever a new takeaway order or booking is submitted online. No more checking a computer screen—they are alerted immediately.
 - **Amazon Simple Email Service (SES)**: Automatically sends a polite confirmation email (or SMS via SNS if they don't have email) to the customer, letting them know their order/booking was received and confirmed.
 
 ---
@@ -76,14 +86,13 @@ To solve these challenges without breaking the bank, we will deploy a **Serverle
 ### 3.2.4. Benefits: Why Salt & Pepper Should Choose AWS
 
 **Benefit 1: Eradicating Manual Errors and Double-Bookings**
-- Digital forms capture every order perfectly without handwriting errors. DynamoDB automatically checks the calendar database to ensure a table isn't booked twice. The chaos of paper slips is gone, and customers get exactly what they ordered.
+- Digital forms capture every order perfectly without handwriting errors. DynamoDB automatically checks the calendar database to ensure a table isn't booked twice. The chaos of paper slips is gone, and customers get exactly what they ordered. Amazon RDS can also help scale the growth of Salt & Pepper, or lack thereof since it provides secure, reliable, and backed-up data, ensuring financial and operational records.
 
 **Benefit 2: Extremely Low Cost (AWS Free Tier)**
-- This is crucial for a small local business in Khayelitsha. The proposed serverless architecture costs roughly **$15–$20 per month** to run. 
-- AWS provides different limits than the ones quoted:Lambda: You get 1 million free requests per month. You also get 400,000 GB-seconds of compute time per month. These limits never expire.
+- This is crucial for a small local business in Khayelitsha. The proposed serverless architecture costs roughly **$15–$20 per month** to run.
+- AWS provides different limits than the ones quoted: Lambda: You get 1 million free requests per month. You also get 400,000 GB-seconds of compute time per month. These limits never expire.
 - S3: You get 5 GB of standard storage. You also get 20,000 Get requests and 2,000 Put requests per month. This also never expires.
-- Cognito: The always-free tier provides 10,000 Monthly Active Users (MAUs) (under the Essentials plan).
-  Pepper's actual monthly bill could be **less than $5** for the entire first year.
+- Cognito: The always-free tier provides 10,000 Monthly Active Users (MAUs) (under the Essentials plan). Pepper's actual monthly bill could be **less than $5** for the entire first year.
 
 **Benefit 3: Automatic Scalability for Peak Times**
 - When a massive community event happens in Khayelitsha and orders flood in, AWS Lambda and DynamoDB handle the traffic automatically. They can process 500 orders simultaneously without needing any new staff to answer phones or any expensive new hardware. The owner focuses on cooking, not answering calls.
@@ -95,4 +104,3 @@ To solve these challenges without breaking the bank, we will deploy a **Serverle
 - By automating the order-taking and notification process, the staff no longer have to be glued to the phone during lunch rush. They can focus entirely on serving the dine-in guests, cleaning tables, and delivering amazing hospitality, which improves both customer satisfaction and staff happiness.
 
 ---
-
