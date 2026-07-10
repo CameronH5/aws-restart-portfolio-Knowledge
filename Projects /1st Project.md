@@ -8,8 +8,11 @@ This document outlines the business profile, operational challenges, technical s
 ### 3.2.1. Company Overview (Detailed Profile)
 
 **Business Name:** Salt & Pepper Restaurant
+
 **Location:** 9 Yusuf Arafat Crescent, Khayelitsha, Cape Town, 7784
+
 **Established:** 2016
+
 **Core Offerings:** A beloved local eatery serving hearty, affordable meals. Their menu blends traditional South African favorites (like hearty stews, pap, and grilled meats) with modern casual dining options like burgers, wraps, and freshly prepared salads. Alongside its culinary servings, Salt and Pepper hosts weekly Games Nights, where guests can enjoy chess, 30 Seconds, Jenga, card games, and snakes and ladders.
 
 **Customer Base:** A loyal, tight-knit community of local residents, families, nearby retail workers, and students from the surrounding area. Beyond its local circle, Salt & Pepper also welcomes tourists from around the world who are drawn to Cape Town and eager to experience Khayelitsha which the largest township in the Western Cape Province.
