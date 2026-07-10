@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this lab, I learned how to manage and monitor services on an Amazon Linux 2 EC2 instance. The focus was on checking the status of the Apache HTTP Server (`httpd`) service and monitoring the instance's performance using both Linux command-line tools and AWS CloudWatch.
+In this lab, I learned how to manage and monitor services on an Amazon Linux 2 EC2 instance. The focus was on checking the status of the Apache HTTP Server (`httpd`) service and monitoring the instance with Linux tools and AWS CloudWatch.
 
 ## Objectives
 
@@ -59,7 +59,7 @@ Hint: Some lines were ellipsized, use -l to show in full.
 
 **Analysis:**
 
-The output showed that the httpd service was **loaded** and **active (running)** since 13:41:32 UTC. The service displayed multiple httpd processes running in the background with the `-DFOREGROUND` flag, indicating that Apache had spawned several worker processes to handle incoming requests. The status message showed "Total requests: 0; Idle/Busy workers 100/0" meaning the server was ready but hadn't received any traffic yet.
+The output showed that the httpd service was **loaded** and **active (running)** since 13:41:32 UTC. The service displayed multiple httpd processes running in the background with the `-DFOREGROUND` option.
 
 ### Step 22: Start the httpd Service
 
@@ -79,7 +79,6 @@ sudo systemctl status httpd.service
 
 <img width="718" height="107" alt="Screenshot 2026-06-19 154224" src="https://github.com/user-attachments/assets/8f324686-de59-416d-8cb1-5d6a3819b205" />
 
-
 **Expected Output:**
 
 After starting the service, the status command confirmed:
@@ -95,29 +94,9 @@ The service was now confirmed to be in the **active (running)** state.
 
 Now that httpd is running, verify it works correctly by opening a new tab in your browser and navigating to `http://<public-ip>`. Replace `<public-ip>` with the public IP address of your EC2 instance.
 
-**Expected Output:**
-
 <img width="1901" height="551" alt="Screenshot 2026-06-19 154357" src="https://github.com/user-attachments/assets/c006b29c-c6b9-47dd-8a34-e403f054663e" />
 
-
-When you navigated to `http://34.220.47.196`, the browser displayed the **Apache HTTP Server Test Page**:
-
-```
-Test Page
-
-This page is used to test the proper operation of the Apache HTTP server after it has been installed. 
-If you can read this page, it means that the Apache HTTP server installed at this site is working properly.
-
-If you are a member of the general public:
-The fact that you are seeing this page indicates that the website you just visited is either experiencing 
-problems, or is undergoing routine maintenance.
-
-If you are the website administrator:
-You may now add content to the directory /var/www/html/. Note that until you do so, people visiting your 
-website will see this page, and not your content.
-```
-
-The page also displayed the "Powered by APACHE" logo, confirming that the httpd service was successfully running and able to serve HTTP requests. This verified you could make a successful HTTP connection to the local host IP address.
+When you navigated to `http://34.220.47.196`, the browser displayed the **Apache HTTP Server Test Page**.
 
 ### Step 25: Stop the httpd Service
 
@@ -126,6 +105,7 @@ Stop the httpd service using the `systemctl` command:
 ```bash
 sudo systemctl stop httpd.service
 ```
+
 <img width="625" height="57" alt="Screenshot 2026-06-19 154552" src="https://github.com/user-attachments/assets/0a23c962-5eb1-461f-b68d-8d448dccf422" />
 
 ---
@@ -145,44 +125,12 @@ Display the list of running processes by entering the `top` command:
 ```bash
 top
 ```
+
 <img width="787" height="412" alt="Screenshot 2026-06-19 154649" src="https://github.com/user-attachments/assets/93ad3eb3-7f13-4a17-a0d6-599b6b25a57a" />
 
 **Expected Output:**
 
-The `top` command displayed the current running processes and resource usage:
-
-```
-top - 13:46:44 up 11 min, 1 user, load average: 3.97, 0.92, 0.30
-Tasks: 103 total, 15 running, 49 sleeping, 0 stopped, 0 zombie
-%Cpu(s): 61.7 us, 38.3 sy, 0.0 ni, 0.0 id, 0.0 wa, 0.0 hi, 0.0 si, 0.0 st
-KiB Mem : 962708 total, 288120 free, 272404 used, 402184 buff/cache
-KiB Swap: 0 total, 0 free, 0 used, 540784 avail Mem
-
-PID USER    PR NI VIRT   RES    SHR S %CPU %MEM TIME+ COMMAND
-2683 ec2-user 20 0 138656 96732  276 R 14.7 10.0 0:02.58 stress
-2684 ec2-user 20 0 7580   100    0 R 14.3 0.0 0:02.58 stress
-2685 ec2-user 20 0 7580   100    0 R 14.3 0.0 0:02.57 stress
-2686 ec2-user 20 0 138656 96732  276 R 10.0 10.0 0:02.58 stress
-2687 ec2-user 20 0 7580   100    0 R 14.3 0.0 0:02.58 stress
-2690 ec2-user 20 0 7580   100    0 R 14.3 0.0 0:02.58 stress
-2691 ec2-user 20 0 7580   100    0 R 14.3 0.0 0:02.58 stress
-2693 ec2-user 20 0 7580   100    0 R 14.3 0.0 0:02.58 stress
-2694 ec2-user 20 0 7580   100    0 R 14.3 0.0 0:02.58 stress
-2695 ec2-user 20 0 7580   100    0 R 14.3 0.0 0:02.58 stress
-2697 ec2-user 20 0 7580   100    0 R 14.0 0.0 0:02.58 stress
-2698 ec2-user 20 0 7580   100    0 R 14.0 0.0 0:02.56 stress
-2692 ec2-user 20 0 7580   100    0 R 14.0 0.0 0:02.58 stress
-```
-
-**Analysis:**
-
-The `top` output showed:
-- **System Load**: `load average: 3.97, 0.92, 0.30` — indicating significant CPU activity
-- **Tasks**: 103 total, 15 running, 49 sleeping, 0 stopped, 0 zombie processes
-- **CPU Usage**: 61.7% user space, 38.3% system, with minimal idle time
-- **Memory**: 962708 total, 288120 free, 272404 used, 402184 buff/cache
-
-The `top` command displays the processes currently running as well as the resource usage like CPU usage and memory usage. Press "q" to exit from the `top` command and return to the shell.
+The `top` command displayed the current running processes and resource usage (example output shown in the lab).
 
 ### Step 27: Run the Stress Script with `top`
 
@@ -194,40 +142,7 @@ Run the stress script that simulates a heavy workload on the EC2 instance:
 
 <img width="291" height="53" alt="Screenshot 2026-06-19 154638" src="https://github.com/user-attachments/assets/39e0b04f-53da-4eb9-8181-d3a69e61e4ad" />
 
-**Expected Output:**
-
-When running the stress test with `top`, the output showed:
-
-```
-top - 13:46:44 up 11 min, 1 user, load average: 3.97, 0.92, 0.30
-Tasks: 103 total, 15 running, 49 sleeping, 0 stopped, 0 zombie
-%Cpu(s): 61.7 us, 38.3 sy, 0.0 ni, 0.0 id, 0.0 wa, 0.0 hi, 0.0 si, 0.0 st
-KiB Mem : 962708 total, 288120 free, 272404 used, 402184 buff/cache
-KiB Swap: 0 total, 0 free, 0 used, 540784 avail Mem
-
-PID USER    PR NI VIRT   RES SHR S %CPU %MEM TIME+ COMMAND
-2683 ec2-user 20 0 138656 96732 276 R 14.7 10.0 0:02.58 stress
-2684 ec2-user 20 0 7580   100   0 R 14.3 0.0 0:02.58 stress
-2685 ec2-user 20 0 7580   100   0 R 14.3 0.0 0:02.57 stress
-2686 ec2-user 20 0 138656 96732 276 R 10.0 10.0 0:02.58 stress
-2687 ec2-user 20 0 7580   100   0 R 14.3 0.0 0:02.58 stress
-2690 ec2-user 20 0 7580   100   0 R 14.3 0.0 0:02.58 stress
-2691 ec2-user 20 0 7580   100   0 R 14.3 0.0 0:02.58 stress
-2693 ec2-user 20 0 7580   100   0 R 14.3 0.0 0:02.58 stress
-2694 ec2-user 20 0 7580   100   0 R 14.3 0.0 0:02.58 stress
-2695 ec2-user 20 0 7580   100   0 R 14.3 0.0 0:02.58 stress
-2697 ec2-user 20 0 7580   100   0 R 14.0 0.0 0:02.58 stress
-2698 ec2-user 20 0 7580   100   0 R 14.0 0.0 0:02.56 stress
-2692 ec2-user 20 0 7580   100   0 R 14.0 0.0 0:02.58 stress
-```
-
-**Figure:** The command prompt shows a high CPU usage after running a script. It shows the user as ec2-user the percentage of CPU of 14-14.3 and the command used was stress.
-
-**Analysis:**
-
-You can see that the process you just ran has a high CPU usage. The script is designed to run for 6 minutes before stopping. 
-
-In the next steps, you will open the **AWS Management Console** and start the **AWS CloudWatch** application that will give you better insight into your EC2 instance.
+When running the stress test with `top`, you could observe increased CPU usage and multiple stress processes listed in `top`.
 
 ### Step 28: List Running Processes with `top`
 
@@ -237,10 +152,6 @@ Display the list of running processes by entering the `top` command:
 top
 ```
 
-**Expected Output:**
-
-The `top` command displayed the current running processes showing the stress test workload.
-
 ### Step 29: Access AWS Management Console
 
 On the top right of your screen, select the AWS button. This displays the AWS Management Console in a new tab.
@@ -249,61 +160,21 @@ On the top right of your screen, select the AWS button. This displays the AWS Ma
 
 In the Search bar on the top of the screen, enter CloudWatch and press ENTER.
 
-**Expected Output:**
-
-The search bar on the AWS console with the word CloudWatch entered.
-
-The AWS console includes a search bar that you can use to search for services.
-
 <img width="1622" height="817" alt="Screenshot 2026-06-19 154839" src="https://github.com/user-attachments/assets/5deac3ba-2767-41c2-b9e3-92ab29de321a" />
-
 
 ### Step 31: Access the EC2 Dashboard
 
 On the left section of the navigation pane, select **Dashboard**, then select **Automatic dashboards**. In the **Automatic dashboards** list, select **EC2**.
 
-**Expected Output:**
-
-The CloudWatch dashboards display CloudWatch Events, CloudWatch Logs, and EC2 as the top three dashboards.
-
-**Figure:** The graphs shown are CPU Utilization, DiskReadBytes, DiskReadOps, DiskWriteBytes, DiskWriteOps, and NetworkIn for the account's EC2 instances.
-
-This opens up the EC2 dashboard created for you by AWS.
-
-**Expected Output:**
-
-The EC2 dashboard displays several metrics such as CPU utilization, disk reads and writes, and so on.
-
-You can see that by default the **EC2 CloudWatch dashboard** displays several metrics such as the CPU utilization, disk reads and writes, and so on...
-
-You can see a spike in the CPU utilization that matches the time when you started the stress script earlier.
-
 <img width="1895" height="840" alt="Screenshot 2026-06-19 154903" src="https://github.com/user-attachments/assets/2984f8fb-d3bf-4be5-9f4a-d26ca6dab3a9" />
 
-
-> **NOTE**
-> - Dashboards are customizable so you can add or remove widgets
-> - Reorganize them, customize colors, and more features such as alarms or events triggers that you will discover
-> - Later that makes it a key **AWS Service** to monitor your applications
-> - In real time: update the 5 minutes average to 1 second to second review
-> - updates more quickly
+You could see a spike in CPU utilization that matched the timing of the stress script.
 
 ### Step 32: Monitor CPU Utilization Drop
 
-Wait 5 minutes and go back to the AWS CloudWatch dashboard. You see that the CPU utilization dropped significantly.
+Wait 5 minutes and go back to the AWS CloudWatch dashboard. You should see that the CPU utilization dropped back toward baseline after the stress test completed.
 
 <img width="1873" height="712" alt="Screenshot 2026-06-19 155251" src="https://github.com/user-attachments/assets/e7af50f8-6b9b-4dc5-b340-7678bad194d1" />
-
-**Expected Output:**
-
-```
-CPU Utilization: Average
-Percent: 9.77%
-```
-
-The graph shown is the CPU Utilization Average. In this average, the highest percent it reaches is 62.9 percent of around 8 minutes and hovers around 33 percent then drops back down right after the 3 minute mark.
-
-**Figure:** The graph is shown in the CPU Utilization Average. In this average, the highest percent it reaches is 62.9 percent of around 8 minutes and hovers around 33 percent then drops back down right after the 3 minute mark.
 
 ---
 
@@ -312,16 +183,114 @@ The graph shown is the CPU Utilization Average. In this average, the highest per
 In this lab, I successfully:
 
 1. **Managed the httpd Service**: Checked the status, started, and verified the Apache HTTP Server was running by accessing the test page through a web browser.
-
-2. **Monitored with Linux Tools**: Used the `top` command to view real-time process and resource usage on your EC2 instance, including CPU utilization and memory consumption.
-
+2. **Monitored with Linux Tools**: Used the `top` command to view real-time process and resource usage on the EC2 instance, including CPU utilization and memory consumption.
 3. **Simulated System Load**: Ran a stress test script that created measurable CPU load on the instance, demonstrating how system resources respond to workloads.
+4. **Monitored with AWS CloudWatch**: Accessed the EC2 CloudWatch dashboard to visualize instance metrics over time, including CPU utilization, network, and disk metrics.
+5. **Correlated Events**: Connected the stress script execution visible in Linux tools (`top`) with the corresponding spike in AWS CloudWatch metrics.
 
-4. **Monitored with AWS CloudWatch**: Accessed the EC2 CloudWatch dashboard to visualize instance metrics over time, including:
-   - **CPU Utilization**: Observed a spike to 62.9% during the stress test, dropping back to baseline after completion
-   - **Network In**: Tracked network traffic during the monitoring period
-   - Other metrics like Disk Read/Write operations (though not applicable to this CPU-focused workload)
+---
 
-5. **Correlated Events**: Connected the stress script execution visible in Linux tools (`top`) with the corresponding spike in AWS CloudWatch metrics, understanding how local system activity appears in cloud monitoring dashboards.
+## Bash Shell — Create an alias and update PATH
 
+### Objectives
 
+In this section, I created and used an alias to back up a folder and I updated the `PATH` environment variable so I could run a script by name.
+
+### What I did (past tense, step-by-step)
+
+1. Confirmed my working directory
+
+- I ran `pwd` to confirm I was in my home folder (`/home/ec2-user`).
+
+2. Created the backup alias and produced the archive
+
+- I defined an alias named `backup` that invoked `tar` with the create, verbose, gzip, and file options. For example:
+
+```bash
+alias backup='tar -cvzf'
+```
+
+- I then used that alias to create a compressed archive of the `CompanyA` folder by running:
+
+```bash
+backup backup_companyA.tar.gz CompanyA
+```
+
+- The `tar` command listed all of `CompanyA`’s contents as it added them to the archive.
+
+<!-- Image 4: Alias defined and tar output listing CompanyA contents -->
+
+![Alias and tar output (Image 4)](images/image4.png)
+
+3. Verified the tarball was created
+
+- After creating the archive I ran `ls` and confirmed `backup_companyA.tar.gz` and the `CompanyA` directory were present in the working folder.
+
+<!-- Image 5: ls output showing backup_companyA.tar.gz and CompanyA -->
+
+![ls output showing tarball (Image 5)](images/image5.png)
+
+4. Navigated to CompanyA/bin and ran the script directly
+
+- I changed into the bin folder:
+
+```bash
+cd /home/ec2-user/CompanyA/bin
+```
+
+- From that directory I executed the script with:
+
+```bash
+./hello.sh
+```
+
+- The script printed: `Hello ec2-user`.
+
+<!-- Image 6: ./hello.sh produced the expected output -->
+
+![Run script in bin (Image 6)](images/image6.png)
+
+5. Moved up one level and demonstrated running with a relative path
+
+- I moved to the parent directory using `cd ..` (returning to `/home/ec2-user/CompanyA`).
+
+- From there I ran the script with the relative path `./bin/hello.sh` and it again printed `Hello ec2-user`.
+
+<!-- Image 7: Returned to parent directory with cd .. (run ./bin/hello.sh after this image) -->
+
+![cd .. and relative run (Image 7)](images/image7.png)
+
+6. Attempted to run the script by name and diagnosed PATH
+
+- From `/home/ec2-user/CompanyA` I attempted to run `hello.sh` by typing `hello.sh`. The shell returned `-bash: hello.sh: command not found` because `/home/ec2-user/CompanyA/bin` was not in my `PATH`.
+
+- I displayed the `PATH` value with `echo $PATH` and confirmed that `/home/ec2-user/CompanyA/bin` was not present in the PATH list.
+
+<!-- Image 9: failed hello.sh attempt and command not found -->
+
+![Failed run by name (Image 9)](images/image9.png)
+
+<!-- Image 10: echo $PATH output showing the PATH entries -->
+
+![PATH output (Image 10)](images/image10.png)
+
+7. Updated PATH and ran the script by name
+
+- I appended the CompanyA `bin` directory to `PATH` for the session with:
+
+```bash
+PATH=$PATH:/home/ec2-user/CompanyA/bin
+```
+
+- After updating `PATH`, I re-ran `hello.sh` by typing `hello.sh` and it printed `Hello ec2-user`, confirming the shell now found the executable in the newly added `PATH` entry.
+
+<!-- Image 11: PATH update and successful hello.sh run -->
+
+![PATH update and successful run (Image 11)](images/image11.png)
+
+---
+
+If you want, I can also:
+
+- Insert the exact image filenames and alt text you prefer (for example `images/image4.png`, `images/image5.png`, etc.) and commit the image files if you provide them, or
+- Re-order the section placement in this document if you'd rather the Bash Shell content appear earlier in the lab.
