@@ -2,11 +2,11 @@
 
 ## Overview
 
-In this lab, you learned how to manage and monitor services on an Amazon Linux 2 EC2 instance. The focus was on checking the status of the Apache HTTP Server (`httpd`) service and monitoring the instance's performance using both Linux command-line tools and AWS CloudWatch.
+In this lab, I learned how to manage and monitor services on an Amazon Linux 2 EC2 instance. The focus was on checking the status of the Apache HTTP Server (`httpd`) service and monitoring the instance's performance using both Linux command-line tools and AWS CloudWatch.
 
 ## Objectives
 
-By completing this lab, you were able to:
+By completing this lab, I was able to:
 
 1. Check the status of the httpd service to ensure it is running
 2. Verify that you can make an HTTP connection to the local host IP address
@@ -55,6 +55,8 @@ Jun 19 13:41:32 ip-10-0-10-17.us-west-2.compute.internal systemd[1]: Started ...
 Hint: Some lines were ellipsized, use -l to show in full.
 ```
 
+<img width="811" height="413" alt="Screenshot 2026-06-19 154201" src="https://github.com/user-attachments/assets/73cc6079-8c20-417a-b99f-0b673413c510" />
+
 **Analysis:**
 
 The output showed that the httpd service was **loaded** and **active (running)** since 13:41:32 UTC. The service displayed multiple httpd processes running in the background with the `-DFOREGROUND` flag, indicating that Apache had spawned several worker processes to handle incoming requests. The status message showed "Total requests: 0; Idle/Busy workers 100/0" meaning the server was ready but hadn't received any traffic yet.
@@ -75,6 +77,9 @@ Check the status of the httpd service again to confirm it is now running:
 sudo systemctl status httpd.service
 ```
 
+<img width="718" height="107" alt="Screenshot 2026-06-19 154224" src="https://github.com/user-attachments/assets/8f324686-de59-416d-8cb1-5d6a3819b205" />
+
+
 **Expected Output:**
 
 After starting the service, the status command confirmed:
@@ -91,6 +96,9 @@ The service was now confirmed to be in the **active (running)** state.
 Now that httpd is running, verify it works correctly by opening a new tab in your browser and navigating to `http://<public-ip>`. Replace `<public-ip>` with the public IP address of your EC2 instance.
 
 **Expected Output:**
+
+<img width="1901" height="551" alt="Screenshot 2026-06-19 154357" src="https://github.com/user-attachments/assets/c006b29c-c6b9-47dd-8a34-e403f054663e" />
+
 
 When you navigated to `http://34.220.47.196`, the browser displayed the **Apache HTTP Server Test Page**:
 
@@ -118,6 +126,7 @@ Stop the httpd service using the `systemctl` command:
 ```bash
 sudo systemctl stop httpd.service
 ```
+<img width="625" height="57" alt="Screenshot 2026-06-19 154552" src="https://github.com/user-attachments/assets/0a23c962-5eb1-461f-b68d-8d448dccf422" />
 
 ---
 
@@ -136,6 +145,7 @@ Display the list of running processes by entering the `top` command:
 ```bash
 top
 ```
+<img width="787" height="412" alt="Screenshot 2026-06-19 154649" src="https://github.com/user-attachments/assets/93ad3eb3-7f13-4a17-a0d6-599b6b25a57a" />
 
 **Expected Output:**
 
@@ -181,6 +191,8 @@ Run the stress script that simulates a heavy workload on the EC2 instance:
 ```bash
 ./stress.sh & top
 ```
+
+<img width="291" height="53" alt="Screenshot 2026-06-19 154638" src="https://github.com/user-attachments/assets/39e0b04f-53da-4eb9-8181-d3a69e61e4ad" />
 
 **Expected Output:**
 
@@ -243,6 +255,9 @@ The search bar on the AWS console with the word CloudWatch entered.
 
 The AWS console includes a search bar that you can use to search for services.
 
+<img width="1622" height="817" alt="Screenshot 2026-06-19 154839" src="https://github.com/user-attachments/assets/5deac3ba-2767-41c2-b9e3-92ab29de321a" />
+
+
 ### Step 31: Access the EC2 Dashboard
 
 On the left section of the navigation pane, select **Dashboard**, then select **Automatic dashboards**. In the **Automatic dashboards** list, select **EC2**.
@@ -263,6 +278,9 @@ You can see that by default the **EC2 CloudWatch dashboard** displays several me
 
 You can see a spike in the CPU utilization that matches the time when you started the stress script earlier.
 
+<img width="1895" height="840" alt="Screenshot 2026-06-19 154903" src="https://github.com/user-attachments/assets/2984f8fb-d3bf-4be5-9f4a-d26ca6dab3a9" />
+
+
 > **NOTE**
 > - Dashboards are customizable so you can add or remove widgets
 > - Reorganize them, customize colors, and more features such as alarms or events triggers that you will discover
@@ -273,6 +291,8 @@ You can see a spike in the CPU utilization that matches the time when you starte
 ### Step 32: Monitor CPU Utilization Drop
 
 Wait 5 minutes and go back to the AWS CloudWatch dashboard. You see that the CPU utilization dropped significantly.
+
+<img width="1873" height="712" alt="Screenshot 2026-06-19 155251" src="https://github.com/user-attachments/assets/e7af50f8-6b9b-4dc5-b340-7678bad194d1" />
 
 **Expected Output:**
 
@@ -289,7 +309,7 @@ The graph shown is the CPU Utilization Average. In this average, the highest per
 
 ## Summary
 
-In this lab, you successfully:
+In this lab, I successfully:
 
 1. **Managed the httpd Service**: Checked the status, started, and verified the Apache HTTP Server was running by accessing the test page through a web browser.
 
@@ -304,4 +324,4 @@ In this lab, you successfully:
 
 5. **Correlated Events**: Connected the stress script execution visible in Linux tools (`top`) with the corresponding spike in AWS CloudWatch metrics, understanding how local system activity appears in cloud monitoring dashboards.
 
-This hands-on experience demonstrated the importance of both Linux-level and cloud-level monitoring for managing EC2 instances and troubleshooting performance issues in production environments.
+
