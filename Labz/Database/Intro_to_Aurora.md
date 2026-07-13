@@ -107,11 +107,6 @@ Finally, to confirm my data and practice filtering, I executed a `SELECT` query 
 ```sql
 SELECT * FROM country WHERE GNP > 35000 and Population > 10000000;
 
-<img width="1895" height="287" alt="Screenshot 2026-07-13 194954" src="https://github.com/user-attachments/assets/ef99b762-6251-4e98-8a82-dde3ff304970" />
-
-
-
-
 ```
 The query successfully returned the two expected records: Australia and Thailand. 
-![Task 4: Querying the country Table](Screenshot_Task4_6.png)
+<img width="1895" height="287" alt="Screenshot 2026-07-13 194954" src="https://github.com/user-attachments/assets/ef99b762-6251-4e98-8a82-dde3ff304970" />
