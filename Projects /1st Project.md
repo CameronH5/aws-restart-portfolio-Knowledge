@@ -106,4 +106,45 @@ To solve these challenges without breaking the bank, we will deploy a **Serverle
 **Benefit 5: Massive Staff Relief and Efficiency**
 - By automating the order-taking and notification process, the staff no longer have to be glued to the phone during lunch rush. They can focus entirely on serving the dine-in guests, cleaning tables, and delivering amazing hospitality, which improves both customer satisfaction and staff happiness.
 
+**Website for Salt & Pepper**
+Below is some images of the website once it has been moved onto S3:
+
+<img width="1882" height="761" alt="Screenshot 2026-07-14 142636" src="https://github.com/user-attachments/assets/fdf0a256-3a06-4007-ab02-99b8c1ee58fe" />
+
+**Menu**
+<img width="1121" height="802" alt="Screenshot 2026-07-14 143026" src="https://github.com/user-attachments/assets/202818b1-e0e1-418f-8895-570560427755" />
+
+**Making an order**
+<img width="1725" height="942" alt="Screenshot 2026-07-14 142944" src="https://github.com/user-attachments/assets/55a82f64-676d-40f4-8a85-194ef18a2215" />
+<img width="1071" height="896" alt="Screenshot 2026-07-14 143004" src="https://github.com/user-attachments/assets/ab1be77b-4a33-42fc-9bef-52f13373d314" />
+<img width="1026" height="457" alt="Screenshot 2026-07-14 143011" src="https://github.com/user-attachments/assets/e6d878ef-dc06-49b0-b375-3a69e3d73312" />
+
+**Games Night**
+<img width="1126" height="880" alt="Screenshot 2026-07-14 143040" src="https://github.com/user-attachments/assets/44f4bc37-838f-46a9-8420-3991b64c5647" />
+
+**Favourite meals**
+<img width="1018" height="851" alt="Screenshot 2026-07-14 143050" src="https://github.com/user-attachments/assets/6afce5ba-39db-40a1-aa88-4166043beded" />
+
+**Why is there a website**
+<img width="1115" height="587" alt="Screenshot 2026-07-14 143057" src="https://github.com/user-attachments/assets/514a4f28-87f3-4794-a955-26894f44e7b0" />
+
+
+**How to creat an account and sign in**
+<img width="1137" height="837" alt="Screenshot 2026-07-14 143122" src="https://github.com/user-attachments/assets/9caf91c4-ff2a-4fcb-bc99-0cccdc720204" />
+
+**How to book a table**
+<img width="1042" height="730" alt="Screenshot 2026-07-14 143109" src="https://github.com/user-attachments/assets/08942c78-e894-4a45-b9ae-a8c2c5291ea9" />
+<img width="1506" height="937" alt="Screenshot 2026-07-14 143153" src="https://github.com/user-attachments/assets/e8abfcb5-597b-42c1-bdf4-9f7f927a5e68" />
+
+
+
+
+
+
+
+
+
+
+
+
 ---
