@@ -19,8 +19,6 @@ First, I browsed the café website and placed some orders to create data that wo
 ### Task 2.1: Connecting to the CLI Host instance
 To begin the infrastructure build, I established a connection to the **CLI Host** EC2 instance. I used the AWS Management Console to select the instance and utilized **EC2 Instance Connect** to securely open a terminal session.
 
-![Screenshot: EC2 Instance Connect interface for the CLI Host](your_image_20.png)
-
 ### Task 2.2: Configuring the AWS CLI
 From within the EC2 Instance Connect terminal, I configured the AWS CLI by running the `aws configure` command. I pasted the `AccessKey`, `SecretKey`, set the `LabRegion` as the default region, and `json` as the default output format. 
 
