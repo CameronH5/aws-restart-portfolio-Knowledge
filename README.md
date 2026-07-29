@@ -1,16 +1,11 @@
-# aws-restart-portfolio-Knowledge
-Knowledge learnt for Cloud Support
-
-I am creating this Repo as a way to showcase the skills and applied knowledge I have learnt through out my time in the AWS restart course where we covered all the basic knowledge I would need to be able to become a Cloud practitioner. I had upskilled from being a normal customer service call centre agent to upskilling into the cloud as it was an exciting path to change careers and learn about IT and the cloud.
-
-
 # My Journey in the AWS re/Start Program 🚀
 
-![AWS re/Start Banner](https://img.shields.io/badge/AWS_re/Start-2025-blue?style=for-the-badge&logo=amazon-aws)
+![AWS re/Start Banner](https://img.shields.io/badge/AWS_re/Start-2026-blue?style=for-the-badge&logo=amazon-aws)
 
 ## From Beginner to Job-Ready Professional
 
-Embarking on the AWS re/Start program was more than just a course; it was a transformative experience. Designed to take individuals from ground zero in tech to confident, job-ready professionals, the program provided me with a robust foundation in cloud computing and essential IT skills. This repository serves as the digital home for that journey.
+Embarking on the AWS re/Start program was more than just a course; it was a transformative experience. Designed to take individuals from ground zero in tech to confident, job-ready professionals, the program provided me with a robust foundation in cloud computing and essential IT skills. This repository serves as the digital home for that journey as a way to showcase the skills and applied knowledge I have learnt through out my time in the AWS restart course where we covered all the basic knowledge I would need to be able to become a Cloud practitioner. I had upskilled from being a normal customer service call centre agent to upskilling into the cloud as it was an exciting path to change careers and learn about IT and the cloud.
+
 
 ### The Core Skills I Acquired
 
