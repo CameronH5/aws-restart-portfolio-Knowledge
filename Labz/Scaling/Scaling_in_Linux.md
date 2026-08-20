@@ -1,4 +1,4 @@
-<img width="1147" height="367" alt="Screenshot 2026-08-17 195552" src="https://github.com/user-attachments/assets/dcc1cae0-0fa7-4b1a-9dbc-b9d76c9562d4" /># Using Auto Scaling in AWS (Linux) - Lab Summary
+# Using Auto Scaling in AWS (Linux) - Lab Summary
 
 ## Lab Overview
 
