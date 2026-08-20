@@ -1,5 +1,4 @@
 
-```markdown
 # AWS Labz Portfolio: Cloud Infrastructure & Services
 
 Welcome to my **AWS Labz** repository. This document serves as an overview of the hands-on labs I have completed to hone my skills in cloud computing. Utilizing the Amazon Web Services (AWS) platform, I have worked through practical scenarios covering core services, best practices, and architectural design.
