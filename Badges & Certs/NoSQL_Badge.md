@@ -21,5 +21,5 @@ Upon completing all assignments in the learning plan, I earned an official AWS b
 - Designed and built my first NoSQL database using Amazon DynamoDB
 - Learned how to define primary keys and structure data for scalable applications
 - Gained practical understanding of when NoSQL databases are the right choice
-```
+
 <img width="1062" height="817" alt="Screenshot 2026-08-24 192900" src="https://github.com/user-attachments/assets/46412c3a-7b60-4dcf-b2e2-5d291ac4b27e" />
