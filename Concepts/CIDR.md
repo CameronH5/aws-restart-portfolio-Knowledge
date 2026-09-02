@@ -31,24 +31,3 @@ If you buy a block with 256 houses, AWS takes these specific ones:
 
 Because of this AWS tax, you only get **251 houses** (IP addresses) to actually use for your computers!
 
-import ipaddress
-
-def calculate_cidr(cidr_string):
-    try:
-        network = ipaddress.ip_network(cidr_string, strict=False)
-        total_ips = network.num_addresses
-        # Handle /31 and /32 edge cases for usable hosts
-        if network.prefixlen == 32:
-            usable_ips = 1
-        elif network.prefixlen == 31:
-            usable_ips = 2
-        else:
-            usable_ips = total_ips - 2
-            
-        print(f"CIDR: {network}")
-        print(f"Netmask: {network.netmask}")
-        print(f"Total Addresses: {total_ips:,}")
-        print(f"Usable Hosts: {usable_ips:,}")
-    except ValueError as e:
-        print(f"Invalid CIDR: {e}")
-
