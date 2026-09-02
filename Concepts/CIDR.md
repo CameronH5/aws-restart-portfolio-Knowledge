@@ -52,5 +52,3 @@ def calculate_cidr(cidr_string):
     except ValueError as e:
         print(f"Invalid CIDR: {e}")
 
-# Example usage:
-calculate_cidr("192.168.1.0/24")
