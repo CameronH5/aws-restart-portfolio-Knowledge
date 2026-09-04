@@ -2,7 +2,7 @@
 
 ---
 
-## 1. Explained Like I'm Five (ELI5)
+## 1. Explained Simply
 
 Imagine you own a **giant, magical amusement park** called AWS. Inside this park, there are tons of cool rides, games, and prize booths:
 * One ride is a roller coaster called **EC2**.
@@ -22,7 +22,7 @@ Without IAM, the doors to the rides stay locked, and nobody can do anything. IAM
 
 ---
 
-## 2. Explained Like an Adult (Standard Overview)
+## 2. Explained Normal (Standard Overview)
 
 In technical terms, **AWS Identity and Access Management (IAM)** is a web service that helps you securely control access to **Amazon Web Services (AWS)** resources. It is the core security framework of the AWS ecosystem, responsible for managing **Authentication** (verifying who you are) and **Authorization** (verifying what you are allowed to do).
 
