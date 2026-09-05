@@ -5,13 +5,11 @@ Amazon Macie is a fully managed data security and data privacy service that uses
 ---
 
 ## 1. Executive Summary & Metaphors
-
-### For a Child (The Metaphor)
 Imagine you have a giant playroom filled with thousands of cardboard toy boxes. Most boxes just have building blocks and plushies. However, hidden inside one of those boxes is your private diary containing your real name, phone number, and secret home address. 
 
 **Amazon Macie** is like a smart, automated guard dog. It walks through the playroom, sniffs inside every single box, and immediately barks to let you know if it finds your private diary. If it sees that the box containing your diary was left wide open with the front door unlocked, it barks even louder so you can rush over and lock it safely away from strangers.
 
-### For an Adult (The Professional Context)
+### The Professional Context
 In enterprise environments, data grows exponentially across cloud storage repositories. **Amazon Macie** acts as an automated data classification and security auditor for [Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/s3/). By continuously scanning storage buckets, executing pattern-matching algorithms, and running machine learning models, Macie systematically uncovers exposed, unencrypted, or regulation-bound data assets (like credit cards or medical records) and alerts compliance teams before a data breach occurs.
 
 ---
