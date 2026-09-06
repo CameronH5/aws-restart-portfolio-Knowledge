@@ -81,3 +81,43 @@ I created a new file `collections.py` to experiment with three collection data t
       "Saanvi": "banana",
       "Paulo": "pineapple"
   }
+
+
+# Data Types, Structures, and File Handling
+
+Throughout this lab, I completed a hands-on introduction to Python programming. I started by learning foundational concepts like variables and basic data types, then progressed to more complex structures such as lists, tuples, dictionaries, and eventually file handling. Here is a descriptive summary of the specific tasks I performed.
+
+## Exercise 1: Mastering String Data Types and User Input
+I began by creating a simple string variable. I used the `print()` function to display "This is a string," and then used the `type()` function to confirm its data type was `<class 'str'>`. To concatenate the sentence, I learned how to convert the return value of `type()` into a string using the `str()` function.
+
+I then practiced string concatenation by combining `firstString = "water"` and `secondString = "fall"` to create "waterfall". Next, I explored user interaction by using the `input()` function to ask the user for their name, favorite color, and favorite animal. Finally, I used the `.format()` method to create a dynamic, formatted sentence that read: "Cameron, you like a Red Lion!".
+
+## Exercise 2: Working with Lists and Tuples
+In the `collections.py` file, I defined a list called `myFruitList` containing "apple", "banana", and "cherry". I printed the list to verify its contents and used `type()` to confirm it was a list. 
+
+I practiced **indexing** (which starts at 0) to access individual items: `myFruitList[0]`, `[1]`, and `[2]`. I then demonstrated that **lists are mutable** by changing the value at index 2 from "cherry" to "orange". 
+
+Afterwards, I learned about **tuples**, which are immutable (cannot be changed). I created a tuple called `myFinalAnswerTuple` using parentheses and accessed its items by position, just like a list.
+
+## Exercise 3: Exploring Dictionaries
+In this exercise, I defined a dictionary called `myFavoriteFruitDictionary`. Unlike lists and tuples which use indices, dictionaries use named keys. I mapped names like "Akua" to "apple", "Saanvi" to "banana", and "Paulo" to "pineapple". 
+
+I printed the entire dictionary to see its contents, used `type()` to confirm it was a dictionary (`<class 'dict'>`), and then accessed specific values by passing the keys (e.g., `["Akua"]`, `["Saanvi"]`, `["Paulo"]`) into the brackets.
+
+## Categorizing Mixed Data Types
+I created a script to test mixed data types. I defined a list called `myMixedTypeList` that contained an integer, another integer, a float, a boolean (`True`), and strings. I then used a `for` loop to iterate over the list, using `.format()` to print the value and its corresponding type for every item.
+
+**The Real-World Debugging Experience:**
+During this exercise, I encountered a common real-world problem. I had named the file `categorize-values.py`, but when I tried to run it in the terminal, I mistakenly typed `python3 categorize-value.py` (forgetting the 's' at the end). This resulted in a `[Errno 2] No such file or directory` error. I successfully debugged this by looking at my file explorer, realizing my typo, and running the correct command `python3 categorize-values.py`, which then executed perfectly.
+
+## Final Task: Creating a Car Inventory with Composite Data
+In the final, more advanced exercise, I created a script to read and process tabular data from a CSV file (`car_fleet.csv`). 
+
+I first imported the `csv` and `copy` modules. I defined a dictionary called `myVehicle` to act as a template for the data, with keys for the VIN, make, model, year, range, top speed, zero-to-sixty, and mileage. 
+
+I used a `with open(...)` statement to handle the file safely. By using `csv.reader()`, I was able to loop through the CSV data. I implemented an `if-else` statement to correctly skip the header row and process the data rows. 
+
+The most crucial part of this lab was using `copy.deepcopy()`. I learned that without this, Python would create a shallow copy pointing to the same memory location, causing all imported cars to overwrite each other. By using a deep copy, I ensured that each car's data was stored uniquely in a separate memory box within `myInventoryList`. Finally, I used a nested `for` loop to iterate through the inventory and print out all the key-value pairs for each car, separated by dashed lines.
+
+**Conclusion:** This lab successfully took me from basic string manipulation all the way to complex composite data structures and file input/output, solidifying my foundational knowledge of Python.
+```
