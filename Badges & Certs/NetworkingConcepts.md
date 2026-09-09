@@ -1,4 +1,4 @@
-# Executive Summary: AWS SimuLearn – Networking Concepts
+# AWS SimuLearn – Networking Concepts
 
 ## Overview
 
@@ -21,3 +21,5 @@ The **AWS SimuLearn: Networking Concepts** module provided an interactive, scena
 * Transitioned raw business networking requirements into a isolated, defense-in-depth VPC environment.
 
 * Demonstrated hands-on technical proficiency in CIDR block planning, VPC traffic routing, and network perimeter protection using AWS security primitives.
+
+<img width="1172" height="822" alt="image" src="https://github.com/user-attachments/assets/a842136f-0124-4a81-9714-57aca6d5f0ef" />
