@@ -12,3 +12,5 @@ The **AWS SimuLearn: Highly Available Web Applications** module provided an inte
 ## Key Outcomes
 * Successfully transitioned a single point of failure into a self-healing, highly available web architecture.
 * Demonstrated hands-on technical proficiency in configuring Application Load Balancers, Auto Scaling groups, and multi-AZ VPC configurations.
+
+<img width="1165" height="822" alt="image" src="https://github.com/user-attachments/assets/0e6f97e6-02bc-451b-b8ea-1277c53a027b" />
