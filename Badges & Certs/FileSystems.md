@@ -1,4 +1,4 @@
-# Executive Summary: AWS SimuLearn – File Systems in the Cloud
+# AWS SimuLearn – File Systems in the Cloud
 
 ## Overview
 The **AWS SimuLearn: File Systems in the Cloud** course provided an interactive simulation where the learner gathered business requirements from a fictional client and implemented a cloud-native file-sharing architecture in AWS.
@@ -12,3 +12,5 @@ The **AWS SimuLearn: File Systems in the Cloud** course provided an interactive 
 ## Key Outcomes
 * Successfully translated a business need into a fully managed, serverless cloud storage solution.
 * Demonstrated hands-on technical proficiency in deploying, configuring, and testing Amazon EFS and EC2 network access in a live console environment.
+
+<img width="1162" height="827" alt="image" src="https://github.com/user-attachments/assets/08a29e6a-b0a9-4738-ade8-3b44d2b842f3" />
