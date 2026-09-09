@@ -1,4 +1,4 @@
-# Executive Summary: AWS SimuLearn – Highly Available Web Applications
+# AWS SimuLearn – Highly Available Web Applications
 
 ## Overview
 The **AWS SimuLearn: Highly Available Web Applications** module provided an interactive, role-based simulation focused on converting a single-instance web application into a resilient, multi-AZ cloud architecture capable of handling fluctuating traffic and preventing single points of failure.
