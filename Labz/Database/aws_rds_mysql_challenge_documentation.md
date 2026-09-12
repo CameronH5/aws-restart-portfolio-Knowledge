@@ -31,14 +31,16 @@ In this lab challenge, an Amazon RDS MySQL instance was provisioned within a spe
 - Package repositories were updated using `sudo yum update -y`.
 - The MariaDB/MySQL client utility was installed via `sudo yum install mariadb -y`.
 
-![Client Installation](Screenshot%202026-09-12%20154336.png)
+<img width="850" height="552" alt="Screenshot 2026-09-12 154336" src="https://github.com/user-attachments/assets/96d708c7-e051-4529-9d5c-485815fc5455" />
+
 
 - A secure database connection was initialized from the EC2 terminal to the RDS cluster endpoint:
   ```bash
   mysql -h database-1.cluster-cnlosbf9ovtp.us-west-2.rds.amazonaws.com -P 3306 -u admin -p
   ```
+<img width="887" height="692" alt="Screenshot 2026-09-12 154348" src="https://github.com/user-attachments/assets/bee32867-c410-4ad6-bd37-ef9768ec26fc" />
 
-![Connecting to RDS Endpoint](Screenshot%202026-09-12%20154348.png)
+
 
 ---
 
@@ -67,7 +69,7 @@ CREATE TABLE RESTART (
 );
 ```
 
-![Creating RESTART Table and Inserting Records](Screenshot%202026-09-12%20154433.png)
+
 
 #### 2. Data Insertion
 Ten sample records were inserted into the `RESTART` table:
@@ -85,6 +87,7 @@ INSERT INTO RESTART VALUES
 (9, 'Ian Malcolm', 'Johannesburg', '2026-06-15 10:00:00'),
 (10, 'Julia Roberts', 'Cape Town', '2026-06-15 10:00:00');
 ```
+<img width="910" height="646" alt="Screenshot 2026-09-12 154433" src="https://github.com/user-attachments/assets/ece4ab9c-521f-4011-88c6-42a8549dc293" />
 
 #### 3. Data Verification
 A full table scan was performed to verify record insertion:
@@ -93,7 +96,8 @@ A full table scan was performed to verify record insertion:
 SELECT * FROM RESTART;
 ```
 
-![Querying RESTART Table](Screenshot%202026-09-12%20154453.png)
+<img width="927" height="616" alt="Screenshot 2026-09-12 154453" src="https://github.com/user-attachments/assets/832eed44-a556-4172-b2ac-32efd6403aca" />
+
 
 ---
 
@@ -145,7 +149,8 @@ INNER JOIN CLOUD_PRACTITIONER c
     ON r.student_id = c.student_id;
 ```
 
-![SELECT CLOUD_PRACTITIONER and INNER JOIN Query Results](Screenshot%202026-09-12%20160227.png)
+<img width="717" height="667" alt="Screenshot 2026-09-12 160227" src="https://github.com/user-attachments/assets/e7ac3e5a-efe7-4930-a19d-c70f4b739024" />
+
 
 ---
 
